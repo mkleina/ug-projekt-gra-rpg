@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gra_studia.Plugins", "Gra_studia.Plugins.csproj", "{2641A64B-D814-0F58-EB4A-5A6104C3306E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gra_studia", "Gra_studia.csproj", "{33970D26-93CE-7900-0E8B-FF3F0BA18FDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gra_studia.Editor", "Gra_studia.Editor.csproj", "{6CD638FD-7856-903E-04F6-4A7CE72E47AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2641A64B-D814-0F58-EB4A-5A6104C3306E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2641A64B-D814-0F58-EB4A-5A6104C3306E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2641A64B-D814-0F58-EB4A-5A6104C3306E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2641A64B-D814-0F58-EB4A-5A6104C3306E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33970D26-93CE-7900-0E8B-FF3F0BA18FDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33970D26-93CE-7900-0E8B-FF3F0BA18FDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33970D26-93CE-7900-0E8B-FF3F0BA18FDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33970D26-93CE-7900-0E8B-FF3F0BA18FDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CD638FD-7856-903E-04F6-4A7CE72E47AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CD638FD-7856-903E-04F6-4A7CE72E47AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CD638FD-7856-903E-04F6-4A7CE72E47AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CD638FD-7856-903E-04F6-4A7CE72E47AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
