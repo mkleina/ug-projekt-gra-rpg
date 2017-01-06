@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class WSAD : MonoBehaviour {
-    const int speed = 4;
+    const int speed = 2;
     const int jumpPower = 15;
     const int topSpeed = 8;
 
@@ -17,36 +16,46 @@ public class WSAD : MonoBehaviour {
     }
     void FixedUpdate()
     {
-        if (rb.velocity.magnitude < topSpeed)
-        {
+        //if (rb.velocity.magnitude < topSpeed)
+       // {
             if (Input.GetKey(KeyCode.W))
             {
                 rb.AddRelativeForce(Vector3.forward * speed, ForceMode.VelocityChange);
             }
             if (Input.GetKey(KeyCode.S))
             {
-                rb.velocity += -transform.forward * Time.deltaTime * speed;
+                rb.AddRelativeForce(Vector3.back * speed, ForceMode.VelocityChange);
             }
             if (Input.GetKey(KeyCode.A))
             {
-                rb.velocity += -transform.right * Time.deltaTime * speed;
+                rb.AddRelativeForce(Vector3.left * speed, ForceMode.VelocityChange);
             }
             if (Input.GetKey(KeyCode.D))
             {
-                rb.velocity += transform.right * Time.deltaTime * speed;
+                rb.AddRelativeForce(Vector3.right* speed, ForceMode.VelocityChange);
             }
-        }
+      //  }
 
-        if (Input.GetKey(KeyCode.Space) && !isFalling)
-        {
-            rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
-            isFalling = true;
-        }
+        jump();
     }
 
     void OnCollisionStay(Collision collisionInfo)
     {
         isFalling = false;
+    }
+
+    void jump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && !isFalling)
+        {
+            rb.AddForce(Vector3.up * jumpPower*speed, ForceMode.Impulse);
+            isFalling = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.Space) && !isFalling)
+        {
+            rb.AddForce(Vector3.up * jumpPower * speed, ForceMode.Impulse);
+
+        }
     }
 }
 
