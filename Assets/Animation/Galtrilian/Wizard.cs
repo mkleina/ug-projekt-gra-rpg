@@ -4,7 +4,7 @@ public class Wizard : MonoBehaviour
 {
     bool run = false;
     Animator anim;
-
+    bool onGround = true;
     // Use this for initialization
     void Start()
     {
@@ -20,16 +20,10 @@ public class Wizard : MonoBehaviour
     }
     void Moveing()
     {
-        if (!run)
-        {
-            anim.SetFloat("VelX", Mathf.Clamp(Input.GetAxis("MoveX"),-.50f,.50f));
-            anim.SetFloat("VelY", Mathf.Clamp(Input.GetAxis("MoveY"),-.50f,.50f));
-        }
-        else
-        {
+
             anim.SetFloat("VelX", Input.GetAxis("MoveX"));
             anim.SetFloat("VelY", Input.GetAxis("MoveY"));
-        }
+
       
     }
 
@@ -46,6 +40,14 @@ public class Wizard : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {      
             anim.SetTrigger("Jump");
+            onGround = false;
+        }
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            onGround = true;
         }
     }
 }
