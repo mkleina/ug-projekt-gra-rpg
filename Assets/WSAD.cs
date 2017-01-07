@@ -3,7 +3,7 @@ using System.Collections;
 
 public class WSAD : MonoBehaviour {
     const int speed = 4;
-    const int jumpPower = 15;
+    const int jumpPower = 2600;
     const int topSpeed = 8;
 
 	// Update is called once per frame
@@ -37,15 +37,16 @@ public class WSAD : MonoBehaviour {
             }
         }
 
-        if (Input.GetKey(KeyCode.Space) && !isFalling)
+        if (Input.GetKeyDown(KeyCode.Space) && !isFalling)
         {
             rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
             isFalling = true;
         }
     }
 
-    void OnCollisionStay(Collision collisionInfo)
+    void OnTriggerEnter(Collider collider)
     {
+        Debug.Log(collider.name);
         isFalling = false;
     }
 }
