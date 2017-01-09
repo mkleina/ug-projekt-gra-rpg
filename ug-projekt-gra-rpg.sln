@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ug-projekt-gra-rpg.CSharp.Plugins", "ug-projekt-gra-rpg.CSharp.Plugins.csproj", "{F9B15325-DB71-E81A-F277-D4EA92FC570D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ug-projekt-gra-rpg.Plugins", "ug-projekt-gra-rpg.Plugins.csproj", "{3C7D1730-DC22-7308-FC12-322FF964FDD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ug-projekt-gra-rpg.CSharp", "ug-projekt-gra-rpg.CSharp.csproj", "{574B3E97-D95A-04C3-59E0-4CD34419584A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ug-projekt-gra-rpg", "ug-projekt-gra-rpg.csproj", "{BA700B9D-E397-D1A0-0CE6-B89E62210E64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ug-projekt-gra-rpg.CSharp.Editor", "ug-projekt-gra-rpg.CSharp.Editor.csproj", "{09C2AD47-415E-B24F-DF55-A6067C01B5C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ug-projekt-gra-rpg.Editor", "ug-projekt-gra-rpg.Editor.csproj", "{1156ECB4-4AA6-E80D-E2FA-97327275E17E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,18 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F9B15325-DB71-E81A-F277-D4EA92FC570D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F9B15325-DB71-E81A-F277-D4EA92FC570D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F9B15325-DB71-E81A-F277-D4EA92FC570D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F9B15325-DB71-E81A-F277-D4EA92FC570D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{574B3E97-D95A-04C3-59E0-4CD34419584A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{574B3E97-D95A-04C3-59E0-4CD34419584A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{574B3E97-D95A-04C3-59E0-4CD34419584A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{574B3E97-D95A-04C3-59E0-4CD34419584A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{09C2AD47-415E-B24F-DF55-A6067C01B5C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09C2AD47-415E-B24F-DF55-A6067C01B5C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09C2AD47-415E-B24F-DF55-A6067C01B5C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09C2AD47-415E-B24F-DF55-A6067C01B5C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C7D1730-DC22-7308-FC12-322FF964FDD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C7D1730-DC22-7308-FC12-322FF964FDD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C7D1730-DC22-7308-FC12-322FF964FDD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C7D1730-DC22-7308-FC12-322FF964FDD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA700B9D-E397-D1A0-0CE6-B89E62210E64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA700B9D-E397-D1A0-0CE6-B89E62210E64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA700B9D-E397-D1A0-0CE6-B89E62210E64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA700B9D-E397-D1A0-0CE6-B89E62210E64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1156ECB4-4AA6-E80D-E2FA-97327275E17E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1156ECB4-4AA6-E80D-E2FA-97327275E17E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1156ECB4-4AA6-E80D-E2FA-97327275E17E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1156ECB4-4AA6-E80D-E2FA-97327275E17E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
