@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
-public class WSAD : MonoBehaviour
-{
+public class WSAD : MonoBehaviour {
 
     const int speed = 2;
     const int jumpPower = 1100;
@@ -50,25 +49,25 @@ public class WSAD : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.W))
                 {
-                    rb.AddRelativeForce(Vector3.forward * walkSpeed, ForceMode.VelocityChange);
+                    rb.AddRelativeForce(Vector3.forward *walkSpeed, ForceMode.VelocityChange);
                 }
 
                 if (Input.GetKey(KeyCode.S))
                 {
-                    rb.AddRelativeForce(Vector3.back * walkSpeed, ForceMode.VelocityChange); ;
+                    rb.AddRelativeForce(Vector3.back *walkSpeed, ForceMode.VelocityChange); ;
                 }
                 if (Input.GetKey(KeyCode.A))
                 {
-                    rb.AddRelativeForce(Vector3.left * walkSpeed, ForceMode.VelocityChange);
+                    rb.AddRelativeForce(Vector3.left *walkSpeed, ForceMode.VelocityChange);
                 }
                 if (Input.GetKey(KeyCode.D))
                 {
-                    rb.AddRelativeForce(Vector3.right * walkSpeed, ForceMode.VelocityChange);
+                    rb.AddRelativeForce(Vector3.right *walkSpeed, ForceMode.VelocityChange);
                 }
             }
         }
-        anim.SetFloat("VelX", Input.GetAxis("MoveX"));
-        anim.SetFloat("VelY", Input.GetAxis("MoveY"));
+        anim.SetFloat("VelX", Input.GetAxis("Horizontal"));
+        anim.SetFloat("VelY", Input.GetAxis("Vertical"));
 
         jump();
 
@@ -80,7 +79,7 @@ public class WSAD : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && onGround)
         {
-
+            
             rb.AddForce(new Vector3(0, jumpPower, 0));
 
             anim.SetTrigger("Jump");
@@ -112,3 +111,4 @@ public class WSAD : MonoBehaviour
 
 
 }
+
