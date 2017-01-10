@@ -6,6 +6,7 @@ public class WizardHolding : MonoBehaviour
 {
     const float objectMoveSpeed = 15.0f;
     const float objectRotateSpeed = 200.0f;
+    const float objectThrowPower = 10000.0f;
 
     const float objectDistanceMin = 3.0f;
     const float objectDistanceMax = 12.0f;
@@ -22,6 +23,12 @@ public class WizardHolding : MonoBehaviour
         GameObject.Find("Crosshair2").GetComponent<Image>().enabled = special;
     }
 
+    void dropHoldedObject()
+    {
+        holdedThing.GetComponent<Rigidbody>().useGravity = true;
+        holdedThing = null;
+    }
+
     void Update()
     {
         // Grab movable object in front of crosshair
@@ -33,7 +40,7 @@ public class WizardHolding : MonoBehaviour
             {
                 turnSpecialCrosshair(true);
 
-                if (Input.GetMouseButton(0) && holdedThing == null)
+                if (Input.GetMouseButtonDown(0) && holdedThing == null)
                 {
                     objectDistance = hit.distance;
                     holdedThing = hit.transform.gameObject;
@@ -49,8 +56,7 @@ public class WizardHolding : MonoBehaviour
         // Drop holded object
         if (!Input.GetMouseButton(0) && holdedThing != null)
         {
-            holdedThing.GetComponent<Rigidbody>().useGravity = true;
-            holdedThing = null;
+            dropHoldedObject();
         }
 
         // Moving object in space (forward, backward and rotation)
@@ -82,6 +88,13 @@ public class WizardHolding : MonoBehaviour
                 CameraMove.stopCamera = true;
                 holdedThing.GetComponent<Rigidbody>().angularVelocity = new Vector3(0, 0, 0);
                 holdedThing.transform.Rotate(new Vector3(Input.GetAxis("Mouse Y") * objectRotateSpeed * Time.deltaTime, -Input.GetAxis("Mouse X") * objectRotateSpeed * Time.deltaTime, 0), Space.World);
+            } else
+            {
+                if (Input.GetKeyDown(KeyCode.T))
+                {
+                    holdedThing.GetComponent<Rigidbody>().AddForce(ray.GetPoint(0) + transform.forward * objectThrowPower, ForceMode.Impulse);
+                    dropHoldedObject();
+                }
             }
         }
 
