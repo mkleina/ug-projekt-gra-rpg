@@ -122,6 +122,7 @@
     <Compile Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
     <Compile Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
     <Compile Include="Assets\Potwory\Szkielet\Character\Skeleton.cs" />
+    <Compile Include="Assets\Startup.cs" />
     <Compile Include="Assets\WSAD.cs" />
     <Compile Include="Assets\WizardHolding.cs" />
   </ItemGroup>

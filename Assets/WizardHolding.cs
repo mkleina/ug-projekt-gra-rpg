@@ -4,10 +4,13 @@ using UnityEngine.UI;
 
 public class WizardHolding : MonoBehaviour
 {
-    const float objectMoveSpeed = 2.2f;
-    const float objectRotateSpeed = 180.0f;
-    const float objectMoveMin = 3.0f;
-    const float objectMoveMax = 12.0f;
+    const float objectMoveSpeed = 15.0f;
+    const float objectRotateSpeed = 200.0f;
+
+    const float objectDistanceMin = 3.0f;
+    const float objectDistanceMax = 12.0f;
+    const float objectDistanceSpeed = 0.2f;
+    private float objectDistance = 10.0f;
 
     private Ray ray;
     private RaycastHit []hits;
@@ -21,19 +24,20 @@ public class WizardHolding : MonoBehaviour
 
     void Update()
     {
-        ray = Camera.allCameras[0].ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
+        // Grab movable object in front of crosshair
+        ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         hits = Physics.RaycastAll(ray);
         foreach (var hit in hits)
         {
-            if (hit.transform.gameObject.tag == "Holdable" && Mathf.Clamp(hit.distance, objectMoveMin, objectMoveMax) == hit.distance)
+            if (hit.transform.gameObject.tag == "Holdable" && Mathf.Clamp(hit.distance, objectDistanceMin, objectDistanceMax) == hit.distance)
             {
                 turnSpecialCrosshair(true);
 
                 if (Input.GetMouseButton(0) && holdedThing == null)
                 {
+                    objectDistance = hit.distance;
                     holdedThing = hit.transform.gameObject;
-                    holdedThing.GetComponent<Rigidbody>().isKinematic = true;
-                    holdedThing.transform.SetParent(Camera.main.transform);
+                    holdedThing.GetComponent<Rigidbody>().useGravity = false;
                     break;
                 }
             } else
@@ -41,64 +45,47 @@ public class WizardHolding : MonoBehaviour
                 turnSpecialCrosshair(false);
             }
         }
+
+        // Drop holded object
         if (!Input.GetMouseButton(0) && holdedThing != null)
         {
-            Debug.Log("Dropped");
-            holdedThing.GetComponent<Rigidbody>().isKinematic = false;
-            holdedThing.transform.SetParent(null);
+            holdedThing.GetComponent<Rigidbody>().useGravity = true;
             holdedThing = null;
         }
 
-        // Moving object towards holder
+        // Moving object in space (forward, backward and rotation)
         if (holdedThing != null)
         {
+            // Get point in front of camera
+            var cameraFront = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, objectDistance));
+
+            // Move holded thing to new destination in front of camera
+            var holdedThingDestination = Vector3.ClampMagnitude((cameraFront - holdedThing.transform.position) * objectMoveSpeed, objectMoveSpeed);
+            holdedThing.GetComponent<Rigidbody>().velocity = holdedThingDestination;
+
             if (Input.GetKey(KeyCode.R))
             {
-                if (Vector3.Distance(holdedThing.transform.position, holdedThing.transform.parent.position) < objectMoveMax) {
-                    holdedThing.transform.position = Vector3.MoveTowards(holdedThing.transform.position, holdedThing.transform.parent.position, -objectMoveSpeed * Time.deltaTime);
+                if (Vector3.Distance(holdedThing.transform.position, ray.GetPoint(0)) < objectDistanceMax) {
+                    objectDistance = Mathf.Clamp(objectDistance + objectDistanceSpeed, objectDistanceMin, objectDistanceMax);
                 }
             }
             if (Input.GetKey(KeyCode.F))
             {
-                if (Vector3.Distance(holdedThing.transform.position, holdedThing.transform.parent.position) > objectMoveMin)
+                if (Vector3.Distance(holdedThing.transform.position, ray.GetPoint(0)) > objectDistanceMin)
                 {
-                    holdedThing.transform.position = Vector3.MoveTowards(holdedThing.transform.position, holdedThing.transform.parent.position, objectMoveSpeed * Time.deltaTime);
+                    objectDistance = Mathf.Clamp(objectDistance - objectDistanceSpeed, objectDistanceMin, objectDistanceMax);
                 }
             }
-
-
 
             if (Input.GetMouseButton(1))
             {
                 CameraMove.stopCamera = true;
-                holdedThing.transform.Rotate(new Vector3(Input.GetAxis("Mouse Y") * objectRotateSpeed * Time.deltaTime, -Input.GetAxis("Mouse X") * objectRotateSpeed * Time.deltaTime, 0));
+                holdedThing.GetComponent<Rigidbody>().angularVelocity = new Vector3(0, 0, 0);
+                holdedThing.transform.Rotate(new Vector3(Input.GetAxis("Mouse Y") * objectRotateSpeed * Time.deltaTime, -Input.GetAxis("Mouse X") * objectRotateSpeed * Time.deltaTime, 0), Space.World);
             }
-            //if (Input.GetKey(KeyCode.Z) && !Input.GetKey(KeyCode.LeftShift))
-            //{
-            //    holdedThing.transform.Rotate(new Vector3(objectRotateSpeed * Time.deltaTime, 0, 0));
-            //}
-            //if (Input.GetKey(KeyCode.Z) && Input.GetKey(KeyCode.LeftShift))
-            //{
-            //    holdedThing.transform.Rotate(new Vector3(-objectRotateSpeed * Time.deltaTime, 0, 0));
-            //}
-            //if (Input.GetKey(KeyCode.X) && !Input.GetKey(KeyCode.LeftShift))
-            //{
-            //    holdedThing.transform.Rotate(new Vector3(0, objectRotateSpeed * Time.deltaTime, 0));
-            //}
-            //if (Input.GetKey(KeyCode.X) && Input.GetKey(KeyCode.LeftShift))
-            //{
-            //    holdedThing.transform.Rotate(new Vector3(0, -objectRotateSpeed * Time.deltaTime, 0));
-            //}
-            //if (Input.GetKey(KeyCode.C) && !Input.GetKey(KeyCode.LeftShift))
-            //{
-            //    holdedThing.transform.Rotate(new Vector3(0, 0, objectRotateSpeed * Time.deltaTime));
-            //}
-            //if (Input.GetKey(KeyCode.C) && Input.GetKey(KeyCode.LeftShift))
-            //{
-            //    holdedThing.transform.Rotate(new Vector3(0, 0, -objectRotateSpeed * Time.deltaTime));
-            //}
         }
 
+        // Stop camera while rotating
         if (!Input.GetMouseButton(1) || holdedThing == null)
         {
             if (CameraMove.stopCamera)
