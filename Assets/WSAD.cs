@@ -2,14 +2,14 @@
 
 public class WSAD : MonoBehaviour {
 
-    const int speed = 2;
-    const int jumpPower = 1100;
-    const int topSpeed = 8;
-    const float walkSpeed = 1.15f;
+    const float runSpeed = 8.0f;
+    const float walkSpeed = 3.0f;
+
+    const float jumpPower = 120000.0f;
+
     bool run = false;
-    bool isFalling = false;
     bool onGround = true;
-    float jumping;
+
     Animator anim;
     Rigidbody rb;
 
@@ -21,94 +21,48 @@ public class WSAD : MonoBehaviour {
 
     void Update()
     {
-        Runing();
+        run = Input.GetKey(KeyCode.LeftShift);
+        anim.SetBool("Sprint", run);
 
-        if (rb.velocity.magnitude < topSpeed)
+        float speed = run ? runSpeed : walkSpeed;
+
+        if (rb.velocity.magnitude < speed)
         {
-            if (run)
+            if (Input.GetKey(KeyCode.W))
             {
-                if (Input.GetKey(KeyCode.W))
-                {
-                    rb.AddRelativeForce(Vector3.forward * speed, ForceMode.VelocityChange);
-                }
-
-                if (Input.GetKey(KeyCode.S))
-                {
-                    rb.AddRelativeForce(Vector3.back * speed, ForceMode.VelocityChange); ;
-                }
-                if (Input.GetKey(KeyCode.A))
-                {
-                    rb.AddRelativeForce(Vector3.left * speed, ForceMode.VelocityChange);
-                }
-                if (Input.GetKey(KeyCode.D))
-                {
-                    rb.AddRelativeForce(Vector3.right * speed, ForceMode.VelocityChange);
-                }
+                rb.AddRelativeForce(Vector3.forward * speed, ForceMode.VelocityChange);
             }
-            else
+            if (Input.GetKey(KeyCode.S))
             {
-                if (Input.GetKey(KeyCode.W))
-                {
-                    rb.AddRelativeForce(Vector3.forward *walkSpeed, ForceMode.VelocityChange);
-                }
-
-                if (Input.GetKey(KeyCode.S))
-                {
-                    rb.AddRelativeForce(Vector3.back *walkSpeed, ForceMode.VelocityChange); ;
-                }
-                if (Input.GetKey(KeyCode.A))
-                {
-                    rb.AddRelativeForce(Vector3.left *walkSpeed, ForceMode.VelocityChange);
-                }
-                if (Input.GetKey(KeyCode.D))
-                {
-                    rb.AddRelativeForce(Vector3.right *walkSpeed, ForceMode.VelocityChange);
-                }
+                rb.AddRelativeForce(Vector3.back * speed, ForceMode.VelocityChange); ;
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                rb.AddRelativeForce(Vector3.left * speed, ForceMode.VelocityChange);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                rb.AddRelativeForce(Vector3.right * speed, ForceMode.VelocityChange);
             }
         }
         anim.SetFloat("VelX", Input.GetAxis("Horizontal"));
         anim.SetFloat("VelY", Input.GetAxis("Vertical"));
 
-        jump();
-
-
+        if (Input.GetKeyDown(KeyCode.Space) && onGround)
+        {
+            jump();
+        }
     }
 
     void jump()
     {
-
-        if (Input.GetKeyDown(KeyCode.Space) && onGround)
-        {
-            
-            rb.AddForce(new Vector3(0, jumpPower, 0));
-
-            anim.SetTrigger("Jump");
-        }
-
+       rb.AddRelativeForce(new Vector3(0, jumpPower, 0));
+       anim.SetTrigger("Jump");
     }
 
-
-    void Runing()
-    {
-        if (Input.GetKeyDown(KeyCode.LeftControl))
-        {
-            run = !run;
-            anim.SetBool("Sprint", run);
-        }
-    }
-
-    void OnCollisionStay(Collision collisionInfo)
+    void OnTriggerEnter(Collider other)
     {
         onGround = true;
     }
-
-    void OnCollisionExit(Collision collisionInfo)
-    {
-        onGround = false;
-    }
-
-
-
-
 }
 
