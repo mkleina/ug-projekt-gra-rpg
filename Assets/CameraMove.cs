@@ -70,7 +70,7 @@ public class CameraMove : MonoBehaviour
 
         if (!stopCamera)
         {
-            Debug.Log(Camera.main.transform.eulerAngles.x);
+            //Debug.Log(Camera.main.transform.eulerAngles.x);
             Camera.main.transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y") * rotationSensitivity * Time.deltaTime, 0, 0));
             //Camera.main.transform.eulerAngles = new Vector3(Mathf.Clamp(Camera.main.transform.eulerAngles.x, minAngle, maxAngle), Camera.main.transform.eulerAngles.y, Camera.main.transform.eulerAngles.z);
             rb.transform.Rotate(new Vector3(0, Input.GetAxis("Mouse X") * rotationSensitivity * Time.deltaTime, 0));

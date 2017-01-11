@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Skeleton : MonoBehaviour
@@ -14,7 +15,8 @@ public class Skeleton : MonoBehaviour
     public float rotSpeed = 1.0f;
     public float speed = 1.5f;
     float accuracyWP = 5.0f;
-
+    //public Slider healthbar;
+    public GameObject healthBar;
     // Use this for initialization
     void Start()
     {
@@ -24,6 +26,11 @@ public class Skeleton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (healthBar.transform.localScale.x == 0)
+        {
+            return;
+        } 
+
         var pozycja = GameObject.FindGameObjectWithTag("Wizzard").transform.position;
         Vector3 direction = pozycja - this.transform.position;
         direction.y = 0;
