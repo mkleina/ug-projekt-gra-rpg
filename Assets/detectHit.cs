@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class detectHit : MonoBehaviour {
@@ -11,7 +12,7 @@ public class detectHit : MonoBehaviour {
     public float max_Health = 100f;
     public float cur_Health = 0f;
     private float damageMagnitude = 5.0f;
-    private float damageMagnitudeSensivity = 0.6f;
+    private float damageMagnitudeSensivity = 0.8f;
     public GameObject healthBar;
 
 
@@ -26,6 +27,7 @@ public class detectHit : MonoBehaviour {
         if (calc_Health == 0)
         {
             anim.SetBool("isDead", true);
+            GetComponent<NavMeshAgent>().enabled = false;
         }
     }
 
