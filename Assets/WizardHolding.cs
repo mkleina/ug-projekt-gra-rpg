@@ -8,7 +8,7 @@ public class WizardHolding : MonoBehaviour
     const float objectRotateSpeed = 200.0f;
     const float objectThrowPower = 10000.0f;
 
-    const float objectDistanceMin = 3.0f;
+    const float objectDistanceMin = 2.7f;
     const float objectDistanceMax = 12.0f;
     const float objectDistanceSpeed = 0.2f;
     private float objectDistance = 10.0f;
@@ -29,6 +29,12 @@ public class WizardHolding : MonoBehaviour
         holdedThing = null;
     }
 
+    float colliderSize(GameObject obj)
+    {
+        Collider objCollider = obj.GetComponent<Collider>();
+        return Mathf.Max(objCollider.bounds.size.x, objCollider.bounds.size.y, objCollider.bounds.size.z);
+    }
+
     void Update()
     {
         // Grab movable object in front of crosshair
@@ -36,15 +42,15 @@ public class WizardHolding : MonoBehaviour
         hits = Physics.RaycastAll(ray);
         foreach (var hit in hits)
         {
-            if (hit.transform.gameObject.tag == "Holdable" && Mathf.Clamp(hit.distance, objectDistanceMin, objectDistanceMax) == hit.distance)
+            if (hit.transform.gameObject.tag == "Holdable" && hit.distance < objectDistanceMax)
             {
                 turnSpecialCrosshair(true);
 
                 if (Input.GetMouseButtonDown(0) && holdedThing == null)
                 {
-                    objectDistance = hit.distance;
                     holdedThing = hit.transform.gameObject;
                     holdedThing.GetComponent<Rigidbody>().useGravity = false;
+                    objectDistance = Mathf.Clamp(hit.distance, colliderSize(holdedThing) / 2 + objectDistanceMin, objectDistanceMax);
                     break;
                 }
             } else
@@ -63,21 +69,21 @@ public class WizardHolding : MonoBehaviour
         if (holdedThing != null)
         {
             // Get point in front of camera
-            var cameraFront = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, objectDistance));
+            var newObjectPosition = ray.GetPoint(objectDistance);
 
             // Move holded thing to new destination in front of camera
-            var holdedThingDestination = Vector3.ClampMagnitude((cameraFront - holdedThing.transform.position) * objectMoveSpeed, objectMoveSpeed);
+            var holdedThingDestination = Vector3.ClampMagnitude((newObjectPosition - holdedThing.transform.position) * objectMoveSpeed, objectMoveSpeed);
             holdedThing.GetComponent<Rigidbody>().velocity = holdedThingDestination;
 
             if (Input.GetKey(KeyCode.R))
             {
-                if (Vector3.Distance(holdedThing.transform.position, ray.GetPoint(0)) < objectDistanceMax) {
+                if (objectDistance < objectDistanceMax) {
                     objectDistance = Mathf.Clamp(objectDistance + objectDistanceSpeed, objectDistanceMin, objectDistanceMax);
                 }
             }
             if (Input.GetKey(KeyCode.F))
             {
-                if (Vector3.Distance(holdedThing.transform.position, ray.GetPoint(0)) > objectDistanceMin)
+                if (objectDistance > objectDistanceMin + colliderSize(holdedThing) / 2)
                 {
                     objectDistance = Mathf.Clamp(objectDistance - objectDistanceSpeed, objectDistanceMin, objectDistanceMax);
                 }
@@ -92,7 +98,7 @@ public class WizardHolding : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.T))
                 {
-                    holdedThing.GetComponent<Rigidbody>().AddForce(ray.GetPoint(0) + transform.forward * objectThrowPower, ForceMode.Impulse);
+                    holdedThing.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * objectThrowPower, ForceMode.Impulse);
                     dropHoldedObject();
                 }
             }

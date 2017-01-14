@@ -10,6 +10,8 @@ public class detectHit : MonoBehaviour {
 
     public float max_Health = 100f;
     public float cur_Health = 0f;
+    private float damageMagnitude = 5.0f;
+    private float damageMagnitudeSensivity = 0.6f;
     public GameObject healthBar;
 
 
@@ -17,10 +19,11 @@ public class detectHit : MonoBehaviour {
     {
         //    healthbar.value -= 100;
         //
-        cur_Health -= 100f;
+        float colliderMagnitude = other.GetComponent<Rigidbody>().velocity.magnitude;
+        cur_Health = Mathf.Clamp(cur_Health - colliderMagnitude * damageMagnitudeSensivity, 0, 100);
         float calc_Health = cur_Health / max_Health;
         SetHealthBar(calc_Health);
-        if(calc_Health == 0)
+        if (calc_Health == 0)
         {
             anim.SetBool("isDead", true);
         }
