@@ -16,6 +16,7 @@ public class NetworkPlayer : Photon.MonoBehaviour {
             camera.SetActive(true);
             GetComponent<CameraMove>().enabled = true;
             GetComponent<WSAD>().enabled = true;
+            GetComponent<PlayerHealth>().enabled = true;
         }
         else
         {

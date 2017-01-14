@@ -58,9 +58,10 @@ GameObject:
   - component: {fileID: 95499243977046136}
   - component: {fileID: 114826968206407446}
   - component: {fileID: 114087287407996878}
+  - component: {fileID: 114428446473327732}
   m_Layer: 0
   m_Name: Wizard
-  m_TagString: Wizzard
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2444,6 +2445,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1977338148913600}
+--- !u!114 &114428446473327732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1037354342609666}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 125da4e84ab82b242ad65b55ac386a9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  healthBarWidthMax: 400
 --- !u!114 &114534890066605590
 MonoBehaviour:
   m_ObjectHideFlags: 1

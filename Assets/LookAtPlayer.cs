@@ -11,11 +11,13 @@ public class LookAtPlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        var pozycja = Camera.main.transform.position;
-        if (pozycja != null)
+        if (Camera.main != null)
         {
-            transform.LookAt(pozycja);
+            var pozycja = Camera.main.transform.position;
+            if (pozycja != null)
+            {
+                transform.LookAt(pozycja);
+            }
         }
-        
     }
 }

@@ -96,7 +96,7 @@ public class Skeleton : MonoBehaviour
                 {
                     anim.SetBool("isAttacking", true);
                     anim.SetBool("isWalking", false);
-                    //rotateTowards(nearestPlayer.transform);
+                    rotateTowards(nearestPlayer.transform);
                 }
             }
         }
