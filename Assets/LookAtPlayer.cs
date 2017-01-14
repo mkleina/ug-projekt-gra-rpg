@@ -11,7 +11,7 @@ public class LookAtPlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        var pozycja = GameObject.FindGameObjectWithTag("Wizzard").transform.position;
+        var pozycja = Camera.main.transform.position;
         if (pozycja != null)
         {
             transform.LookAt(pozycja);
