@@ -8,8 +8,6 @@ public class NetworkManager : MonoBehaviour {
     public Transform spawnPoint2;
     public GameObject playerPrefab;
     public GameObject playerPrefab2;
-    public Camera setCamera;
-    public WizardHolding hold;
     // Use this for initialization
     void Start () {
         PhotonNetwork.ConnectUsingSettings(VERSION);
@@ -31,6 +29,9 @@ public class NetworkManager : MonoBehaviour {
             player.GetComponent<CameraMove>().enabled = true;
             player.GetComponent<WizardHolding>().enabled = true;
             player.transform.FindChild("Camera").gameObject.SetActive(true);
+            player.GetComponent<CapsuleCollider>().enabled = true;
+             player.GetComponent<PlayerHealth>().enabled = true;
+            
         //}
         //if (PhotonNetwork.countOfPlayersInRooms == 1)
         //{
