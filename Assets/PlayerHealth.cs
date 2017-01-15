@@ -1,15 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealth : MonoBehaviour {
+public class PlayerHealth : Photon.MonoBehaviour
+{
     public float health;
     public float healthBarWidthMax;
 
-	// Use this for initialization
-	void Start () {
-	}
+    // Use this for initialization
+    void Start()
+    {
+    }
 
     public void damage(float value)
     {
@@ -21,9 +21,13 @@ public class PlayerHealth : MonoBehaviour {
         return health;
     }
 
-	// Update is called once per frame
-	void Update () {
-        RectTransform healthBarTransform = GameObject.Find("PlayerHealthBar").GetComponent<Image>().rectTransform;
-        healthBarTransform.sizeDelta = new Vector2(get() / 100 * healthBarWidthMax, healthBarTransform.sizeDelta.y);
+    // Update is called once per frame
+    void Update()
+    {
+        if (photonView.isMine)
+        {
+            RectTransform healthBarTransform = GameObject.Find("PlayerHealthBar").GetComponent<Image>().rectTransform;
+            healthBarTransform.sizeDelta = new Vector2(get() / 100 * healthBarWidthMax, healthBarTransform.sizeDelta.y);
+        }
     }
 }

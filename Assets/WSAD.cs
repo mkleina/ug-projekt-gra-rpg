@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class WSAD : MonoBehaviour {
+public class WSAD : Photon.MonoBehaviour {
 
     const float runSpeed = 8.0f;
     const float walkSpeed = 3.0f;
@@ -21,37 +21,42 @@ public class WSAD : MonoBehaviour {
 
     void Update()
     {
-        run = Input.GetKey(KeyCode.LeftShift);
-        anim.SetBool("Sprint", run);
-
-        float speed = run ? runSpeed : walkSpeed;
-
-        if (rb.velocity.magnitude < speed)
+        if (!photonView.isMine)
         {
-            if (Input.GetKey(KeyCode.W))
-            {
-                rb.AddRelativeForce(Vector3.forward * speed, ForceMode.VelocityChange);
-            }
-            if (Input.GetKey(KeyCode.S))
-            {
-                rb.AddRelativeForce(Vector3.back * speed, ForceMode.VelocityChange); ;
-            }
-            if (Input.GetKey(KeyCode.A))
-            {
-                rb.AddRelativeForce(Vector3.left * speed, ForceMode.VelocityChange);
-            }
-            if (Input.GetKey(KeyCode.D))
-            {
-                rb.AddRelativeForce(Vector3.right * speed, ForceMode.VelocityChange);
-            }
+            return;
         }
-        anim.SetFloat("VelX", Input.GetAxis("Horizontal"));
-        anim.SetFloat("VelY", Input.GetAxis("Vertical"));
+            run = Input.GetKey(KeyCode.LeftShift);
+            anim.SetBool("Sprint", run);
 
-        if (Input.GetKeyDown(KeyCode.Space) && onGround)
-        {
-            jump();
-        }
+            float speed = run ? runSpeed : walkSpeed;
+
+            if (rb.velocity.magnitude < speed)
+            {
+                if (Input.GetKey(KeyCode.W))
+                {
+                    rb.AddRelativeForce(Vector3.forward * speed, ForceMode.VelocityChange);
+                }
+                if (Input.GetKey(KeyCode.S))
+                {
+                    rb.AddRelativeForce(Vector3.back * speed, ForceMode.VelocityChange); ;
+                }
+                if (Input.GetKey(KeyCode.A))
+                {
+                    rb.AddRelativeForce(Vector3.left * speed, ForceMode.VelocityChange);
+                }
+                if (Input.GetKey(KeyCode.D))
+                {
+                    rb.AddRelativeForce(Vector3.right * speed, ForceMode.VelocityChange);
+                }
+            }
+            anim.SetFloat("VelX", Input.GetAxis("Horizontal"));
+            anim.SetFloat("VelY", Input.GetAxis("Vertical"));
+
+            if (Input.GetKeyDown(KeyCode.Space) && onGround)
+            {
+                jump();
+            }
+        
     }
 
     void jump()

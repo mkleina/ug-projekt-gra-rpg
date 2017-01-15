@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.UI;
 
-public class WizardHolding : MonoBehaviour
+public class WizardHolding : Photon.MonoBehaviour
 {
     const float objectMoveSpeed = 15.0f;
     const float objectRotateSpeed = 200.0f;
@@ -38,6 +37,10 @@ public class WizardHolding : MonoBehaviour
     void Update()
     {
         // Grab movable object in front of crosshair
+        if (!photonView.isMine)
+        {
+            return;
+        }
         ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         hits = Physics.RaycastAll(ray);
         foreach (var hit in hits)
