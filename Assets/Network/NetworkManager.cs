@@ -22,30 +22,29 @@ public class NetworkManager : MonoBehaviour {
 
     void OnJoinedRoom()
     {
-        //if (PhotonNetwork.countOfPlayersInRooms == 0)
-        //{
-            GameObject player =(GameObject)PhotonNetwork.Instantiate(playerPrefab.name, spawnPoint.position, Quaternion.identity, 0);
+        if (PhotonNetwork.countOfPlayersInRooms == 1)
+        {
+            GameObject player = (GameObject)PhotonNetwork.Instantiate(playerPrefab.name, spawnPoint.position, Quaternion.identity, 0);
             player.GetComponent<WSAD>().enabled = true;
             player.GetComponent<CameraMove>().enabled = true;
             player.GetComponent<WizardHolding>().enabled = true;
             player.transform.FindChild("Camera").gameObject.SetActive(true);
             player.GetComponent<CapsuleCollider>().enabled = true;
-             player.GetComponent<PlayerHealth>().enabled = true;
-            
-        //}
-        //if (PhotonNetwork.countOfPlayersInRooms == 1)
-        //{
-        //    GameObject player = PhotonNetwork.Instantiate(playerPrefab2.name, spawnPoint2.position, Quaternion.identity, 0);
-        //    WSAD controller = player.GetComponent<WSAD>();
-        //    controller.enabled = true;
-        //    Camera camera = setCamera.GetComponentInChildren<Camera>();
-        //    camera.enabled = true;
-        //    CameraMove camera2 = player.GetComponent<CameraMove>();
-        //    camera2.enabled = true;
-        //    WizardHolding holding = player.GetComponent<WizardHolding>();
-        //    holding.enabled = true;
-        //}
-    }
+            player.GetComponent<PlayerHealth>().enabled = true;
+
+        }
+
+        if (PhotonNetwork.countOfPlayersInRooms == 0)
+            {
+                GameObject player2 = (GameObject)PhotonNetwork.Instantiate(playerPrefab2.name, spawnPoint2.position, Quaternion.identity, 0);
+                player2.GetComponent<WSAD>().enabled = true;
+                player2.GetComponent<CameraMove>().enabled = true;
+                player2.transform.FindChild("Camera").gameObject.SetActive(true);
+                player2.GetComponent<CapsuleCollider>().enabled = true;
+                player2.GetComponent<PlayerHealth>().enabled = true;
+                player2.GetComponent<Attack>().enabled = true;
+            }
+        }
 
     private void Update()
     {

@@ -1398,13 +1398,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomName: Dungeon
   spawnPoint: {fileID: 2125151286}
-  spawnPoint2: {fileID: 1638916241}
+  spawnPoint2: {fileID: 1177007336}
   playerPrefab: {fileID: 1037354342609666, guid: 3b1d1f2d57367d84f82c485877d74c5b,
     type: 2}
-  playerPrefab2: {fileID: 1037354342609666, guid: 0aa43756d79c69a4888d6735d9d3c1ef,
+  playerPrefab2: {fileID: 1770499145809164, guid: 46514f01e6b22b14785d7816b0a8765a,
     type: 2}
-  setCamera: {fileID: 20563838142393854, guid: 3b1d1f2d57367d84f82c485877d74c5b, type: 2}
-  hold: {fileID: 0}
 --- !u!4 &179656216
 Transform:
   m_ObjectHideFlags: 0
@@ -7941,6 +7939,39 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: a65e450bdacb3f0438c7dcc9d0ace79e, type: 3}
   m_PrefabInternal: {fileID: 1380397560}
+--- !u!1 &1177007335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1177007336}
+  m_Layer: 0
+  m_Name: PaladinSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1177007336
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1177007335}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1855.91}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1933.771, y: 2.4000006}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1181013800 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 4040b4df828461d4297ff98a98806982, type: 3}
@@ -11522,39 +11553,6 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: db16d6ef13ea7fe48b77f1f7f483717a, type: 3}
   m_PrefabInternal: {fileID: 1129612133}
---- !u!1 &1638916240
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1638916241}
-  m_Layer: 0
-  m_Name: SpawnPointPaladyn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1638916241
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1638916240}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1857.83}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1934.4203, y: 2.4000015}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1650681811 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100078, guid: 5a35c5f0a89b9654d897ccd7c8f81bd0, type: 3}
