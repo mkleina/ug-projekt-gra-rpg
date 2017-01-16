@@ -1,51 +1,45 @@
 ﻿using UnityEngine;
 
-public class NetworkPlayer : Photon.MonoBehaviour {
+public class NetworkPlayer : Photon.MonoBehaviour
+{
     public GameObject camera;
-    Vector3 position;
-    Quaternion rotation;
+    Vector3 docelowaPozycja;
+    Quaternion docelowaRotacja;
     bool isAlive = true;
-    float lerp = 5f;
+    public float razy = 1f;
     // Use this for initialization
     void Start()
     {
-        PhotonNetwork.sendRate = 20;
-        PhotonNetwork.sendRateOnSerialize = 10;
+        PhotonNetwork.sendRate = 30;
+        PhotonNetwork.sendRateOnSerialize = 30;
         if (photonView.isMine)
         {
-            camera.SetActive(true);
-            GetComponent<CameraMove>().enabled = true;
-            GetComponent<WSAD>().enabled = true;
-            GetComponent<PlayerHealth>().enabled = true;
+
         }
-        else
+  
+     
+    }
+
+    private void Update()
+    {
+        if (!photonView.isMine)
         {
-            StartCoroutine("Alive");
+            transform.position = Vector3.Lerp(transform.position, docelowaPozycja, razy * Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, docelowaRotacja, razy * Time.deltaTime);
         }
     }
 
-    // Update is called once per frame
-    void OnPhotonSerializeVIew(PhotonStream stream, PhotonMessageInfo info)
+    void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        if(stream.isWriting)
+        if (photonView.isMine)
         {
             stream.SendNext(transform.position);
             stream.SendNext(transform.rotation);
         }
         else
         {
-            //position = (Vector3)stream.ReceiveNext();
-            //rotation = (Quaternion)stream.ReceiveNext();
+            docelowaPozycja = (Vector3)stream.ReceiveNext();
+            docelowaRotacja = (Quaternion)stream.ReceiveNext();
         }
     }
-
-    //IEnumerator Alive()
-    //{
-    //    while(isAlive)
-    //    {
-    //        transform.position = Vector3.Lerp(transform.position, position, Time.deltaTime * lerp);
-    //        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * lerp);
-    //        yield return null;
-    //    }
-    //}
 }

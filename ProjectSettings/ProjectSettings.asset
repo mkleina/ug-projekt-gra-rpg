@@ -524,9 +524,9 @@ PlayerSettings:
     Game_Performance: 0
     Hub: 0
     Purchasing: 0
-    UNet: 0
+    UNet: 1
     Unity_Ads: 0
-  cloudProjectId: 3cde08c6-c2e9-43ac-84fe-6d58bc34bbb7
+  cloudProjectId: 0025e9e6-93a4-4f2b-b4e2-cf5b7259cbad
   projectName: Gra_studia
-  organizationId: kklimaszewski1
+  organizationId: szamurajek
   cloudEnabled: 0
