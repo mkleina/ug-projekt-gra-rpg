@@ -91,6 +91,7 @@
     <Compile Include="Assets\Animations.cs" />
     <Compile Include="Assets\Attack.cs" />
     <Compile Include="Assets\CameraMove.cs" />
+    <Compile Include="Assets\CharacterHealth.cs" />
     <Compile Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Scripts\Antialiasing.cs" />
     <Compile Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Scripts\Bloom.cs" />
     <Compile Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Scripts\BloomAndFlares.cs" />
@@ -209,7 +210,7 @@
     <Compile Include="Assets\PhotonChatApi\ChatState.cs" />
     <Compile Include="Assets\PhotonChatApi\ChatUserStatus.cs" />
     <Compile Include="Assets\PhotonChatApi\IChatClientListener.cs" />
-    <Compile Include="Assets\PlayerHealth.cs" />
+    <Compile Include="Assets\PlayerHealthBar.cs" />
     <Compile Include="Assets\Potwory\Szkielet\Character\Skeleton.cs" />
     <Compile Include="Assets\Startup.cs" />
     <Compile Include="Assets\WSAD.cs" />

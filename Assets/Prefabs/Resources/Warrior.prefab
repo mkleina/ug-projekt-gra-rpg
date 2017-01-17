@@ -857,11 +857,12 @@ GameObject:
   - component: {fileID: 65673267650351416}
   - component: {fileID: 95707613620865202}
   - component: {fileID: 114952402521236232}
-  - component: {fileID: 114720871281037096}
   - component: {fileID: 114841743651610396}
   - component: {fileID: 114107554142490368}
   - component: {fileID: 114113984083928658}
   - component: {fileID: 114533909137050686}
+  - component: {fileID: 114382579857974328}
+  - component: {fileID: 114720871281037096}
   m_Layer: 0
   m_Name: Warrior
   m_TagString: Player
@@ -2278,6 +2279,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
   razy: 1
+--- !u!114 &114382579857974328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1770499145809164}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c03fcc235d409d347959650c8c00a246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthValue: 100
+  healthValueMax: 100
 --- !u!114 &114396396581484640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2333,12 +2347,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1770499145809164}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 125da4e84ab82b242ad65b55ac386a9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: {fileID: 114382579857974328}
   healthBarWidthMax: 400
 --- !u!114 &114768493858698562
 MonoBehaviour:

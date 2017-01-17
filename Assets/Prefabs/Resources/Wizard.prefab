@@ -57,10 +57,11 @@ GameObject:
   - component: {fileID: 65368972184546626}
   - component: {fileID: 95499243977046136}
   - component: {fileID: 114826968206407446}
-  - component: {fileID: 114428446473327732}
   - component: {fileID: 114724138367401354}
   - component: {fileID: 114297814196669120}
   - component: {fileID: 114543339039026676}
+  - component: {fileID: 114013046966202398}
+  - component: {fileID: 114428446473327732}
   m_Layer: 0
   m_Name: Wizard
   m_TagString: Player
@@ -2435,6 +2436,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114013046966202398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1037354342609666}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c03fcc235d409d347959650c8c00a246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthValue: 100
+  healthValueMax: 100
 --- !u!114 &114297814196669120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2459,7 +2473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 125da4e84ab82b242ad65b55ac386a9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: {fileID: 114013046966202398}
   healthBarWidthMax: 400
 --- !u!114 &114534890066605590
 MonoBehaviour:

@@ -61,8 +61,9 @@ public class WSAD : Photon.MonoBehaviour {
 
     void jump()
     {
-       rb.AddRelativeForce(new Vector3(0, jumpPower, 0));
-       anim.SetTrigger("Jump");
+        onGround = false;
+        rb.AddRelativeForce(new Vector3(0, jumpPower, 0));
+        anim.SetTrigger("Jump");
     }
 
     void OnTriggerEnter(Collider other)

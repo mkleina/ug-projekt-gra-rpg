@@ -8,39 +8,30 @@ public class detectHit : MonoBehaviour {
 
     //public Slider healthbar;
     Animator anim;
-
-    public float max_Health = 100f;
-    public float cur_Health = 0f;
-    private float damageMagnitude = 5.0f;
     private float damageMagnitudeSensivity = 0.8f;
     public GameObject healthBar;
 
 
     private void OnTriggerEnter(Collider other)
     {
-        //    healthbar.value -= 100;
-        //
-        float colliderMagnitude = other.GetComponent<Rigidbody>().velocity.magnitude;
-        cur_Health = Mathf.Clamp(cur_Health - colliderMagnitude * damageMagnitudeSensivity, 0, 100);
-        float calc_Health = cur_Health / max_Health;
-        SetHealthBar(calc_Health);
-        if (calc_Health == 0)
-        {
-            anim.SetBool("isDead", true);
-            GetComponent<NavMeshAgent>().enabled = false;
-        }
+        GetComponent<CharacterHealth>().damage(other.GetComponent<Rigidbody>().velocity.magnitude * damageMagnitudeSensivity);
     }
 
     // Use this for initialization
     void Start () {
-        cur_Health = max_Health;
         anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        float hp = GetComponent<CharacterHealth>().getPercent();
+        SetHealthBar(hp);
+        if (hp == 0)
+        {
+            anim.SetBool("isDead", true);
+            GetComponent<NavMeshAgent>().enabled = false;
+        }
+    }
 
     public void SetHealthBar(float myHealth)
     {

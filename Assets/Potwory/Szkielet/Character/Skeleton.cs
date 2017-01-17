@@ -112,7 +112,7 @@ public class Skeleton : MonoBehaviour
     {
         GameObject victim = findNearestPlayer(attackDistance);
         if (victim != null) {
-            victim.GetComponent<PlayerHealth>().damage(20);
+            victim.GetComponent<CharacterHealth>().damage(20);
         }
     }
 }

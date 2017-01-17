@@ -5,8 +5,8 @@ public class Attack : Photon.MonoBehaviour
     Animator anim;
     Rigidbody rb;
     const float runSpeed = 8.0f;
-    bool animationFinish = false;
-    bool animationStart = true;
+    const float attackDistance = 2.0f;
+
     public GameObject getPosition;
     // Use this for initialization
     void Start()
@@ -28,32 +28,31 @@ public class Attack : Photon.MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             anim.SetTrigger("fastAttack");
-
         }
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            animationStart = true;
-            animationFinish = false;
             anim.SetTrigger("runAttack");
         }
 
 
     }
 
-    //public void animationFinished()
-    //{
-    //    animationFinish = true;
-    //}
-
-    //private void LateUpdate()
-    //{
-    //    if (animationFinish && animationStart)
-    //    {
-    //        animationStart = false;
-
-    //       //rb.AddRelativeForce(Vector3.forward * 45, ForceMode.VelocityChange);
-
-    //    }
-    //}
+    void HitEvent(int type)
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, attackDistance);
+        foreach (var enemyCollider in hitColliders)
+        {
+            if (enemyCollider.tag == "Enemy")
+            {
+                float damageValue = 0.0f;
+                switch (type)
+                {
+                    case 0: damageValue = 20.0f; break;
+                    case 1: damageValue = 50.0f; break;
+                }
+                enemyCollider.GetComponent<CharacterHealth>().damage(damageValue);
+            }
+        }
+    }
 
 }
