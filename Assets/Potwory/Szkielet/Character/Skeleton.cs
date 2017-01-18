@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class Skeleton : MonoBehaviour
 {
     private const float attackDistance = 2.0f;
-    private const float followDistance = 20.0f;
+    private const float followDistance = 12.0f;
 
     public Transform head;
     public float rotSpeed;

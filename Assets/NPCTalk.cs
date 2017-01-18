@@ -65,6 +65,12 @@ public class NPCTalk : MonoBehaviour {
                     dialogTextID++;
                     if (dialogTextID == dialogText[dialogID].text.Length) talking = false;
                 }
+
+                // Start talking animation if still talking after key pressed
+                if (talking)
+                {
+                    GetComponent<Animator>().SetTrigger("isTalking");
+                }
             }
         } else {
             talking = false;
