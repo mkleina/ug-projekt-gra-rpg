@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class NetworkManager : MonoBehaviour {
     const string VERSION = "v0.0.1";
@@ -38,6 +37,7 @@ public class NetworkManager : MonoBehaviour {
         player.GetComponent<BoxCollider>().enabled = true;
         player.GetComponent<CharacterHealth>().enabled = true;
         player.GetComponent<PlayerHealthBar>().enabled = true;
+        player.GetComponent<Animator>();
 
         // Enable character-specific scripts
         if (playerPrefab.name == "Wizard")
@@ -48,19 +48,15 @@ public class NetworkManager : MonoBehaviour {
         {
             player.GetComponent<Attack>().enabled = true;
         }
+        if (playerPrefab.name == "Archer")
+        {
+            player.GetComponent<BowAttack>().enabled = true;
+        }
+
     }
 
     private void Update()
     {   
     }
 
-    IEnumerator SpawnMyPlayer()
-    {
-        GameObject MyPlayer = PhotonNetwork.Instantiate(playerPrefab.name, playerSpawnPoint.position, playerSpawnPoint.rotation, 0);
-        yield return new WaitForSeconds(0);
-        MyPlayer.GetComponent<WSAD>().enabled = true;
-        MyPlayer.GetComponent<CameraMove>().enabled = true;
-        MyPlayer.GetComponent<Animator>().enabled = true;
-        MyPlayer.GetComponentInChildren<Camera>().enabled = true;
-    }
 }

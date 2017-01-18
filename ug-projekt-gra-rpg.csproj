@@ -90,6 +90,7 @@
     <Compile Include="Assets\Animation\Galtrilian\Wizard.cs" />
     <Compile Include="Assets\Animations.cs" />
     <Compile Include="Assets\Attack.cs" />
+    <Compile Include="Assets\BowAttack.cs" />
     <Compile Include="Assets\CameraMove.cs" />
     <Compile Include="Assets\CharacterHealth.cs" />
     <Compile Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Scripts\Antialiasing.cs" />

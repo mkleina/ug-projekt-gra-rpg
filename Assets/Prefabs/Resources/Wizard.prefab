@@ -59,9 +59,9 @@ GameObject:
   - component: {fileID: 114826968206407446}
   - component: {fileID: 114724138367401354}
   - component: {fileID: 114297814196669120}
-  - component: {fileID: 114543339039026676}
   - component: {fileID: 114013046966202398}
   - component: {fileID: 114428446473327732}
+  - component: {fileID: 114543339039026676}
   m_Layer: 0
   m_Name: Wizard
   m_TagString: Player
@@ -2515,6 +2515,9 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 1
     Name: Sprint
+  - Type: 9
+    SynchronizeType: 0
+    Name: runAtt
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0

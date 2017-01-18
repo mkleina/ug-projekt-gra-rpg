@@ -1398,11 +1398,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomName: Dungeon
   spawnPoints:
-  - {fileID: 1177007336}
+  - {fileID: 1262727984}
   - {fileID: 2125151286}
+  - {fileID: 1177007336}
   playerPrefabs:
-  - {fileID: 1770499145809164, guid: 46514f01e6b22b14785d7816b0a8765a, type: 2}
+  - {fileID: 1926823238069314, guid: 9e11ea33aa8458c47ab990d305ef7e3e, type: 2}
   - {fileID: 1037354342609666, guid: 3b1d1f2d57367d84f82c485877d74c5b, type: 2}
+  - {fileID: 1770499145809164, guid: 46514f01e6b22b14785d7816b0a8765a, type: 2}
 --- !u!4 &179656216
 Transform:
   m_ObjectHideFlags: 0
@@ -8561,6 +8563,39 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3170992a56741a4cb89c578e22597bf, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1262727983
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1262727984}
+  m_Layer: 0
+  m_Name: ArcherSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1262727984
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1262727983}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1849.98}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1935.25, y: 2.4000034}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1263605982
 Prefab:
   m_ObjectHideFlags: 0

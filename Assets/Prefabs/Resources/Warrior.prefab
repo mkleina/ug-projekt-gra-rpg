@@ -858,11 +858,11 @@ GameObject:
   - component: {fileID: 95707613620865202}
   - component: {fileID: 114952402521236232}
   - component: {fileID: 114841743651610396}
-  - component: {fileID: 114107554142490368}
   - component: {fileID: 114113984083928658}
   - component: {fileID: 114533909137050686}
   - component: {fileID: 114382579857974328}
   - component: {fileID: 114720871281037096}
+  - component: {fileID: 114694031779544040}
   m_Layer: 0
   m_Name: Warrior
   m_TagString: Player
@@ -2246,7 +2246,7 @@ Animator:
   m_GameObject: {fileID: 1770499145809164}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 38df8027152c506498441344466dcf72, type: 3}
-  m_Controller: {fileID: 9100000, guid: d6cb18b5e01cd814a80de191d6af7071, type: 2}
+  m_Controller: {fileID: 9100000, guid: eee24dcd16082df47baf0e85b7080b8a, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2254,18 +2254,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114107554142490368
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1770499145809164}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe342f4ce1c9df247acca01278d31488, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  getPosition: {fileID: 1791463490772254}
 --- !u!114 &114113984083928658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2333,14 +2321,25 @@ MonoBehaviour:
     SynchronizeType: 1
     Name: Sprint
   - Type: 9
-    SynchronizeType: 1
-    Name: fastAttack
-  - Type: 9
     SynchronizeType: 0
     Name: runAttack
+  - Type: 9
+    SynchronizeType: 0
+    Name: Shoot
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
+--- !u!114 &114694031779544040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1770499145809164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd77779395758d842ac2edb101ac452e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114720871281037096
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2401,7 +2400,7 @@ MonoBehaviour:
   - {fileID: 114113984083928658}
   - {fileID: 114533909137050686}
   - {fileID: 114841743651610396}
-  - {fileID: 114107554142490368}
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
   instantiationId: -1
