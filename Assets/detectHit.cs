@@ -30,6 +30,9 @@ public class detectHit : MonoBehaviour {
         {
             anim.SetBool("isDead", true);
             GetComponent<NavMeshAgent>().enabled = false;
+
+            // NOTE: Przykład zmiany dialogu NPC
+            GameObject.Find("NPC1").GetComponent<NPCTalk>().setDialog(1);
         }
     }
 

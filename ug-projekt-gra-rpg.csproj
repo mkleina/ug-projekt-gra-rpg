@@ -132,6 +132,8 @@
     <Compile Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
     <Compile Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
     <Compile Include="Assets\LookAtPlayer.cs" />
+    <Compile Include="Assets\NPCDialog.cs" />
+    <Compile Include="Assets\NPCTalk.cs" />
     <Compile Include="Assets\Network\NetworkManager.cs" />
     <Compile Include="Assets\Network\NetworkPlayer.cs" />
     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\CustomTypes.cs" />
