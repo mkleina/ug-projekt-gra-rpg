@@ -7,6 +7,7 @@ TagManager:
   - Holdable
   - NetworkPlayer
   - Enemy
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX
