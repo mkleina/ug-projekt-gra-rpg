@@ -222,6 +222,7 @@
     <Compile Include="Assets\PhotonChatApi\IChatClientListener.cs" />
     <Compile Include="Assets\PlayerHealthBar.cs" />
     <Compile Include="Assets\Potwory\Szkielet\Character\Skeleton.cs" />
+    <Compile Include="Assets\SpawnPointParameters.cs" />
     <Compile Include="Assets\Startup.cs" />
     <Compile Include="Assets\WSAD.cs" />
     <Compile Include="Assets\WizardHolding.cs" />
