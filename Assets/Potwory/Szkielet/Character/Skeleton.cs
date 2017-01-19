@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
 using UnityEngine.AI;
 
 public class Skeleton : MonoBehaviour
@@ -61,22 +59,23 @@ public class Skeleton : MonoBehaviour
         GameObject nearestPlayer = findNearestPlayer(followDistance);
         Vector3 direction;
 
-        if (state == "patrol" && waypoints.Length > 0)
-        {
-            anim.SetBool("isIdle", false);
-            anim.SetBool("isWalking", true);
-            if(Vector3.Distance(waypoints[currentWP].transform.position, transform.position) < accuracyWP)
-            {
-                //currentWP = Random.Range(0, waypoints.Length);
-                currentWP++;
-                if(currentWP >= waypoints.Length)
-                {
-                    currentWP = 0;
-                }
-            }
-            GetComponent<NavMeshAgent>().destination = waypoints[currentWP].transform.position;
-        }
-
+        //if (state == "patrol" && waypoints.Length > 0)
+        //{
+        //    anim.SetBool("isIdle", false);
+        //    anim.SetBool("isWalking", true);
+        //    if (Vector3.Distance(waypoints[currentWP].transform.position, transform.position) < accuracyWP)
+        //    {
+        //        //currentWP = Random.Range(0, waypoints.Length);
+        //        currentWP++;
+        //        if (currentWP >= waypoints.Length)
+        //        {
+        //            currentWP = 0;
+        //        }
+        //    }
+        //    GetComponent<NavMeshAgent>().destination = waypoints[currentWP].transform.position;
+        //}
+        anim.SetBool("isWalking", false);
+        
         if (nearestPlayer != null) {
             direction = nearestPlayer.transform.position - transform.position;
             direction.y = 0;
@@ -90,6 +89,7 @@ public class Skeleton : MonoBehaviour
                 if (direction.magnitude > attackDistance)
                 {
                     anim.SetBool("isWalking", true);
+                    anim.SetBool("isIdle", true);
                     anim.SetBool("isAttacking", false);
                 }
                 else

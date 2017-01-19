@@ -140,6 +140,7 @@
     <Compile Include="Assets\LookAtPlayer.cs" />
     <Compile Include="Assets\NPCDialog.cs" />
     <Compile Include="Assets\NPCTalk.cs" />
+    <Compile Include="Assets\Movement.cs" />
     <Compile Include="Assets\Network\NetworkManager.cs" />
     <Compile Include="Assets\Network\NetworkPlayer.cs" />
     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\CustomTypes.cs" />

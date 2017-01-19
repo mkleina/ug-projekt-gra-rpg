@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.UI;
 
-public class detectHit : MonoBehaviour {
+public class detectHit : Photon.MonoBehaviour {
 
     //public Slider healthbar;
     Animator anim;
@@ -25,7 +22,8 @@ public class detectHit : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         float hp = GetComponent<CharacterHealth>().getPercent();
-        SetHealthBar(hp);
+
+        photonView.RPC("SetHealthBar", PhotonTargets.All,hp);
         if (hp == 0)
         {
             anim.SetBool("isDead", true);
@@ -35,7 +33,7 @@ public class detectHit : MonoBehaviour {
             GameObject.Find("NPC1").GetComponent<NPCTalk>().setDialog(1);
         }
     }
-
+    [PunRPC]
     public void SetHealthBar(float myHealth)
     {
         healthBar.transform.localScale = new Vector3(myHealth, healthBar.transform.localScale.y, healthBar.transform.localScale.z);

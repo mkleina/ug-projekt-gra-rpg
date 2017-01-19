@@ -36,11 +36,7 @@ public class WizardHolding : Photon.MonoBehaviour
 
     void Update()
     {
-        // Grab movable object in front of crosshair
-        if (!photonView.isMine)
-        {
-            return;
-        }
+
         ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         hits = Physics.RaycastAll(ray);
         foreach (var hit in hits)

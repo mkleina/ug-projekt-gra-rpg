@@ -6,7 +6,7 @@ public class NetworkPlayer : Photon.MonoBehaviour
     Vector3 docelowaPozycja;
     Quaternion docelowaRotacja;
     bool isAlive = true;
-    public float razy = 1f;
+    private float razy = 0.1f;
     // Use this for initialization
     void Start()
     {
