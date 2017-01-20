@@ -92,7 +92,9 @@
     <Compile Include="Assets\Attack.cs" />
     <Compile Include="Assets\BowAttack.cs" />
     <Compile Include="Assets\CameraMove.cs" />
+    <Compile Include="Assets\Campfire Pack\Script\SwitchView.cs" />
     <Compile Include="Assets\CharacterHealth.cs" />
+    <Compile Include="Assets\DNCycle.cs" />
     <Compile Include="Assets\DetectHitByObject.cs" />
     <Compile Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Scripts\Antialiasing.cs" />
     <Compile Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Scripts\Bloom.cs" />
@@ -221,10 +223,14 @@
     <Compile Include="Assets\PlayerHealthBar.cs" />
     <Compile Include="Assets\SpawnPointParameters.cs" />
     <Compile Include="Assets\Startup.cs" />
+    <Compile Include="Assets\WR_wHiteRabbiT-sTudio\WRFramework\Unity\Extensions\VectorExtensions.cs" />
+    <Compile Include="Assets\WR_wHiteRabbiT-sTudio\WRFramework\Unity\UI\GUIHelper.cs" />
+    <Compile Include="Assets\WR_wHiteRabbiT-sTudio\WRFramework\Unity\Util\Logo.cs" />
     <Compile Include="Assets\WSAD.cs" />
     <Compile Include="Assets\WizardHolding.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Campfire Pack\torch\readme.txt" />
     <None Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
     <None Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
     <None Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlur.shader" />
@@ -306,6 +312,7 @@
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
+    <None Include="Assets\WR_wHiteRabbiT-sTudio\Scene\DancingRabbit\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

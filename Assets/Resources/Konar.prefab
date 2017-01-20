@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 23579516912362178}
   - component: {fileID: 54050049790377900}
   - component: {fileID: 64091229076770106}
-  - component: {fileID: 114096533643232264}
   - component: {fileID: 114523566603757756}
   - component: {fileID: 114764462773169546}
   - component: {fileID: 114273241206867704}
@@ -115,18 +114,6 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 4fbd949bcdd13da4f969682d77022453, type: 3}
---- !u!114 &114096533643232264
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1123564997267906}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5737db32131cb3b45a9a127c42b7911f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 0}
 --- !u!114 &114116810779609016
 MonoBehaviour:
   m_ObjectHideFlags: 1
