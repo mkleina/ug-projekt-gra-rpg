@@ -49,8 +49,8 @@ public class WizardHolding : Photon.MonoBehaviour
                 if (Input.GetMouseButtonDown(0) && holdedThing == null)
                 {
                     holdedThing = hit.transform.gameObject;
-                    holdedThing.GetComponent<Rigidbody>().useGravity = false;
                     holdedThing.GetComponent<PhotonView>().RequestOwnership();
+                    holdedThing.GetComponent<Rigidbody>().useGravity = false;
                     objectDistance = Mathf.Clamp(hit.distance, colliderSize(holdedThing) / 2 + objectDistanceMin, objectDistanceMax);
                     break;
                 }

@@ -18,12 +18,7 @@ public class Attack : Photon.MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (!photonView.isMine)
-        {
-            return;
-        }
-
+        if (!photonView.isMine) return;
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -33,12 +28,12 @@ public class Attack : Photon.MonoBehaviour
         {
             anim.SetTrigger("runAttack");
         }
-
-
     }
 
     void HitEvent(int type)
     {
+        if (!photonView.isMine) return;
+
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, attackDistance);
         foreach (var enemyCollider in hitColliders)
         {

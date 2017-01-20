@@ -23,7 +23,7 @@ public class DetectHitByObject : Photon.MonoBehaviour {
 	void Update () {
         float hp = GetComponent<CharacterHealth>().getPercent();
 
-        photonView.RPC("SetHealthBar", PhotonTargets.All,hp);
+        setHealthBarValue(hp);
         if (hp == 0)
         {
             anim.SetBool("isDead", true);
@@ -33,10 +33,10 @@ public class DetectHitByObject : Photon.MonoBehaviour {
             GameObject.Find("NPC1").GetComponent<NPCTalk>().setDialog(1);
         }
     }
-    [PunRPC]
-    public void SetHealthBar(float myHealth)
+
+    public void setHealthBarValue(float enemyHealth)
     {
-        healthBar.transform.localScale = new Vector3(myHealth, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+        healthBar.transform.localScale = new Vector3(enemyHealth, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
     }
 
 }

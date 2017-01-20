@@ -9,10 +9,17 @@ public class CharacterHealth : Photon.MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        
     }
 
     public void damage(float value)
     {
+        // Sending object health information from current player
+        // This fixes online collisions
+        if (this.tag != "Player")
+            //this.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.player);
+            this.GetComponent<PhotonView>().RequestOwnership();
+
         healthValue = Mathf.Clamp(healthValue - value, 0, healthValueMax);
     }
 

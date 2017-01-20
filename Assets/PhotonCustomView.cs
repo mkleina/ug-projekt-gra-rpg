@@ -12,13 +12,17 @@ public class PhotonCustomView : MonoBehaviour, IPunObservable
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
+        var rigid = GetComponent<Rigidbody>();
+        var health = GetComponent<CharacterHealth>();
         if (stream.isWriting)
         {
-            stream.SendNext(GetComponent<Rigidbody>().useGravity);
+            if (rigid != null) stream.SendNext(rigid.useGravity);
+            if (health != null) stream.SendNext(health.healthValue);
         }
         else
         {
-            GetComponent<Rigidbody>().useGravity = (bool)stream.ReceiveNext();
+            if (rigid != null) rigid.useGravity = (bool)stream.ReceiveNext();
+            if (health != null) health.healthValue = (float)stream.ReceiveNext();
         }
     }
 }

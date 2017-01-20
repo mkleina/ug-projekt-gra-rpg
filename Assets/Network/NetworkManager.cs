@@ -70,29 +70,27 @@ public class NetworkManager : MonoBehaviour
             // Spawn next player if available
             if (spawnParams.prefab.name == PhotonNetwork.player.NickName)
             {
-
-
                 // Instantiate player
-                GameObject player = (GameObject)PhotonNetwork.InstantiateGameObject(spawnParams.prefab.name, spawnPoint.transform.position, spawnPoint.transform.rotation, 0);
-                player.GetComponent<WSAD>().enabled = true;
-                player.GetComponent<CameraMove>().enabled = true;
-                player.transform.FindChild("Camera").gameObject.SetActive(true);
-                player.GetComponent<CharacterHealth>().enabled = true;
-                player.GetComponent<PlayerHealthBar>().enabled = true;
-                player.GetComponent<PhotonView>().RequestOwnership();
+                var currentPlayer = (GameObject)PhotonNetwork.InstantiateGameObject(spawnParams.prefab.name, spawnPoint.transform.position, spawnPoint.transform.rotation, 0);
+                currentPlayer.GetComponent<WSAD>().enabled = true;
+                currentPlayer.GetComponent<CameraMove>().enabled = true;
+                currentPlayer.transform.FindChild("Camera").gameObject.SetActive(true);
+                currentPlayer.GetComponent<CharacterHealth>().enabled = true;
+                currentPlayer.GetComponent<PlayerHealthBar>().enabled = true;
+                currentPlayer.GetComponent<PhotonView>().RequestOwnership();
 
                 // Enable character-specific scripts
                 if (spawnParams.prefab.name == "Wizard")
                 {
-                    player.GetComponent<WizardHolding>().enabled = true;
+                    currentPlayer.GetComponent<WizardHolding>().enabled = true;
                 }
                 if (spawnParams.prefab.name == "Warrior")
                 {
-                    player.GetComponent<Attack>().enabled = true;
+                    currentPlayer.GetComponent<Attack>().enabled = true;
                 }
                 if (spawnParams.prefab.name == "Archer")
                 {
-                    player.GetComponent<BowAttack>().enabled = true;
+                    currentPlayer.GetComponent<BowAttack>().enabled = true;
                 }
             }
         }
