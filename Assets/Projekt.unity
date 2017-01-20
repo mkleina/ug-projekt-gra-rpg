@@ -120,7 +120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1105550965680128, guid: f8d03d9799c19b947861b167427d44b2, type: 2}
-  objectType: stone
 --- !u!4 &3007187
 Transform:
   m_ObjectHideFlags: 0
@@ -162,7 +161,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1647372470254514, guid: 141d95ee0007eb24ba01ce1fd8a280fc, type: 2}
-  objectType: stone
 --- !u!4 &7502161
 Transform:
   m_ObjectHideFlags: 0
@@ -270,7 +268,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1402500498625406, guid: d1a134db2f4123b4fbc40de75b43f776, type: 2}
-  objectType: stone
 --- !u!4 &27228354
 Transform:
   m_ObjectHideFlags: 0
@@ -325,7 +322,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1860103150408482, guid: ecfb7cd9098070144991cde372234b53, type: 2}
-  objectType: stone
 --- !u!1 &29255566
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +350,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1432105117226128, guid: 8ae81c7c5fcfc13419b184ecc108ad8a, type: 2}
-  objectType: stone
 --- !u!4 &29255568
 Transform:
   m_ObjectHideFlags: 0
@@ -400,7 +395,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1033179412002624, guid: 9aea7febd104905468e93992c972d169, type: 2}
-  objectType: stone
 --- !u!4 &35484118
 Transform:
   m_ObjectHideFlags: 0
@@ -905,7 +899,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: c92d3fa9d3ed235459b8be2a951d8ce6, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100066, guid: c92d3fa9d3ed235459b8be2a951d8ce6, type: 3}
       propertyPath: m_Name
@@ -1084,7 +1078,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &146907247
 Transform:
   m_ObjectHideFlags: 0
@@ -1437,7 +1430,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &183572517
 GameObject:
@@ -1467,7 +1460,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1647372470254514, guid: 141d95ee0007eb24ba01ce1fd8a280fc, type: 2}
-  objectType: stone
 --- !u!4 &183572519
 Transform:
   m_ObjectHideFlags: 0
@@ -1531,7 +1523,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1432105117226128, guid: 8ae81c7c5fcfc13419b184ecc108ad8a, type: 2}
-  objectType: stone
 --- !u!4 &200192985
 Transform:
   m_ObjectHideFlags: 0
@@ -1573,7 +1564,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &202365642
 Transform:
   m_ObjectHideFlags: 0
@@ -1801,7 +1791,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &219609813
 Transform:
   m_ObjectHideFlags: 0
@@ -1901,7 +1890,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1105550965680128, guid: f8d03d9799c19b947861b167427d44b2, type: 2}
-  objectType: stone
 --- !u!4 &230747010
 Transform:
   m_ObjectHideFlags: 0
@@ -1961,7 +1949,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &237167538
 Transform:
   m_ObjectHideFlags: 0
@@ -2003,7 +1990,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1647372470254514, guid: 141d95ee0007eb24ba01ce1fd8a280fc, type: 2}
-  objectType: stone
 --- !u!4 &237590609
 Transform:
   m_ObjectHideFlags: 0
@@ -2116,7 +2102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1647372470254514, guid: 141d95ee0007eb24ba01ce1fd8a280fc, type: 2}
-  objectType: stone
 --- !u!1 &248870699
 GameObject:
   m_ObjectHideFlags: 0
@@ -2145,7 +2130,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &248870701
 Transform:
   m_ObjectHideFlags: 0
@@ -2543,7 +2527,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &290553277
 Transform:
   m_ObjectHideFlags: 0
@@ -2634,7 +2617,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 35.917, y: 0, z: 0}
 --- !u!4 &301164702 stripped
 Transform:
@@ -2904,7 +2887,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1105550965680128, guid: f8d03d9799c19b947861b167427d44b2, type: 2}
-  objectType: stone
 --- !u!4 &362434536
 Transform:
   m_ObjectHideFlags: 0
@@ -3224,7 +3206,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &401384582
 Transform:
   m_ObjectHideFlags: 0
@@ -3405,7 +3386,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &422652509
 Transform:
   m_ObjectHideFlags: 0
@@ -3568,7 +3548,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1647372470254514, guid: 141d95ee0007eb24ba01ce1fd8a280fc, type: 2}
-  objectType: stone
 --- !u!1001 &435176036
 Prefab:
   m_ObjectHideFlags: 0
@@ -3775,7 +3754,7 @@ Transform:
   - {fileID: 283474337}
   - {fileID: 1739134468}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &483334062 stripped
 GameObject:
@@ -4020,7 +3999,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1402500498625406, guid: d1a134db2f4123b4fbc40de75b43f776, type: 2}
-  objectType: stone
 --- !u!4 &491629398 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: cb4112b49702a6c4f8b065a6d79682da, type: 3}
@@ -4053,7 +4031,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &494028830
 Transform:
   m_ObjectHideFlags: 0
@@ -4099,7 +4076,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &507334748
 Transform:
   m_ObjectHideFlags: 0
@@ -4199,7 +4175,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &521464556
 Transform:
   m_ObjectHideFlags: 0
@@ -4407,7 +4382,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1432105117226128, guid: 8ae81c7c5fcfc13419b184ecc108ad8a, type: 2}
-  objectType: stone
 --- !u!4 &538611335
 Transform:
   m_ObjectHideFlags: 0
@@ -4507,7 +4481,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1647372470254514, guid: 141d95ee0007eb24ba01ce1fd8a280fc, type: 2}
-  objectType: stone
 --- !u!4 &541080986
 Transform:
   m_ObjectHideFlags: 0
@@ -4939,7 +4912,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1860103150408482, guid: ecfb7cd9098070144991cde372234b53, type: 2}
-  objectType: stone
 --- !u!4 &589641254
 Transform:
   m_ObjectHideFlags: 0
@@ -5097,7 +5069,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &602696241
 Transform:
   m_ObjectHideFlags: 0
@@ -5259,7 +5230,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &621228855
 Transform:
   m_ObjectHideFlags: 0
@@ -5305,7 +5275,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1033179412002624, guid: 9aea7febd104905468e93992c972d169, type: 2}
-  objectType: stone
 --- !u!4 &623147914
 Transform:
   m_ObjectHideFlags: 0
@@ -5355,7 +5324,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1860103150408482, guid: ecfb7cd9098070144991cde372234b53, type: 2}
-  objectType: stone
 --- !u!4 &646474118
 Transform:
   m_ObjectHideFlags: 0
@@ -5549,7 +5517,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1647372470254514, guid: 141d95ee0007eb24ba01ce1fd8a280fc, type: 2}
-  objectType: stone
 --- !u!4 &673386791
 Transform:
   m_ObjectHideFlags: 0
@@ -5613,7 +5580,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1033179412002624, guid: 9aea7febd104905468e93992c972d169, type: 2}
-  objectType: stone
 --- !u!4 &679626440
 Transform:
   m_ObjectHideFlags: 0
@@ -5659,7 +5625,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1105550965680128, guid: f8d03d9799c19b947861b167427d44b2, type: 2}
-  objectType: stone
 --- !u!4 &687933677
 Transform:
   m_ObjectHideFlags: 0
@@ -5824,7 +5789,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1105550965680128, guid: f8d03d9799c19b947861b167427d44b2, type: 2}
-  objectType: stone
 --- !u!1001 &702664666
 Prefab:
   m_ObjectHideFlags: 0
@@ -6027,7 +5991,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1647372470254514, guid: 141d95ee0007eb24ba01ce1fd8a280fc, type: 2}
-  objectType: stone
 --- !u!4 &709821502
 Transform:
   m_ObjectHideFlags: 0
@@ -6375,7 +6338,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1432105117226128, guid: 8ae81c7c5fcfc13419b184ecc108ad8a, type: 2}
-  objectType: stone
 --- !u!4 &748089193
 Transform:
   m_ObjectHideFlags: 0
@@ -6863,7 +6825,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1033179412002624, guid: 9aea7febd104905468e93992c972d169, type: 2}
-  objectType: stone
 --- !u!4 &811977262
 Transform:
   m_ObjectHideFlags: 0
@@ -6959,7 +6920,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1033179412002624, guid: 9aea7febd104905468e93992c972d169, type: 2}
-  objectType: stone
 --- !u!4 &831173161
 Transform:
   m_ObjectHideFlags: 0
@@ -7088,7 +7048,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.88079435, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 69.845, y: -306.566, z: -326.7}
 --- !u!4 &841508512 stripped
 Transform:
@@ -7334,7 +7294,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1105550965680128, guid: f8d03d9799c19b947861b167427d44b2, type: 2}
-  objectType: stone
 --- !u!4 &880026139
 Transform:
   m_ObjectHideFlags: 0
@@ -7376,7 +7335,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &887759846
 Transform:
   m_ObjectHideFlags: 0
@@ -7544,7 +7502,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1432105117226128, guid: 8ae81c7c5fcfc13419b184ecc108ad8a, type: 2}
-  objectType: stone
 --- !u!4 &894772264
 Transform:
   m_ObjectHideFlags: 0
@@ -7608,7 +7565,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1432105117226128, guid: 8ae81c7c5fcfc13419b184ecc108ad8a, type: 2}
-  objectType: stone
 --- !u!4 &907928097
 Transform:
   m_ObjectHideFlags: 0
@@ -7708,7 +7664,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1647372470254514, guid: 141d95ee0007eb24ba01ce1fd8a280fc, type: 2}
-  objectType: stone
 --- !u!4 &912384815
 Transform:
   m_ObjectHideFlags: 0
@@ -7874,7 +7829,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1105550965680128, guid: f8d03d9799c19b947861b167427d44b2, type: 2}
-  objectType: stone
 --- !u!4 &931975505
 Transform:
   m_ObjectHideFlags: 0
@@ -8116,7 +8070,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1432105117226128, guid: 8ae81c7c5fcfc13419b184ecc108ad8a, type: 2}
-  objectType: stone
 --- !u!4 &953885291
 Transform:
   m_ObjectHideFlags: 0
@@ -8158,7 +8111,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1105550965680128, guid: f8d03d9799c19b947861b167427d44b2, type: 2}
-  objectType: stone
 --- !u!4 &955791469
 Transform:
   m_ObjectHideFlags: 0
@@ -8230,7 +8182,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1402500498625406, guid: d1a134db2f4123b4fbc40de75b43f776, type: 2}
-  objectType: stone
 --- !u!4 &973307541
 Transform:
   m_ObjectHideFlags: 0
@@ -8272,7 +8223,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1033179412002624, guid: 9aea7febd104905468e93992c972d169, type: 2}
-  objectType: stone
 --- !u!4 &977043678
 Transform:
   m_ObjectHideFlags: 0
@@ -8377,7 +8327,7 @@ RectTransform:
   - {fileID: 2002640302}
   - {fileID: 401976007}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8520,7 +8470,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1105550965680128, guid: f8d03d9799c19b947861b167427d44b2, type: 2}
-  objectType: stone
 --- !u!4 &1004307723
 Transform:
   m_ObjectHideFlags: 0
@@ -9002,7 +8951,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1402500498625406, guid: d1a134db2f4123b4fbc40de75b43f776, type: 2}
-  objectType: stone
 --- !u!4 &1075857517
 Transform:
   m_ObjectHideFlags: 0
@@ -9048,7 +8996,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1647372470254514, guid: 141d95ee0007eb24ba01ce1fd8a280fc, type: 2}
-  objectType: stone
 --- !u!4 &1082340255
 Transform:
   m_ObjectHideFlags: 0
@@ -9224,7 +9171,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &1125519632
 Transform:
   m_ObjectHideFlags: 0
@@ -9324,7 +9270,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1033179412002624, guid: 9aea7febd104905468e93992c972d169, type: 2}
-  objectType: stone
 --- !u!4 &1129907113
 Transform:
   m_ObjectHideFlags: 0
@@ -9486,7 +9431,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1105550965680128, guid: f8d03d9799c19b947861b167427d44b2, type: 2}
-  objectType: stone
 --- !u!4 &1143899544
 Transform:
   m_ObjectHideFlags: 0
@@ -9582,7 +9526,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &1152821725
 Transform:
   m_ObjectHideFlags: 0
@@ -9644,7 +9587,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1033179412002624, guid: 9aea7febd104905468e93992c972d169, type: 2}
-  objectType: stone
 --- !u!4 &1174712592
 Transform:
   m_ObjectHideFlags: 0
@@ -9836,48 +9778,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3170992a56741a4cb89c578e22597bf, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1205412124
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1205412125}
-  - component: {fileID: 1205412126}
-  m_Layer: 0
-  m_Name: TreeSpawn
-  m_TagString: SpawnPoint
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1205412125
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1205412124}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1930.24, y: 12.75, z: 1852.73}
-  m_LocalScale: {x: 2.3233976, y: 1, z: 3.3905962}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1205412126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1205412124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dc8b263071f8f645b92f7fe29fceaaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 1123564997267906, guid: 57a8af7d522d46b408127638cd66bf83, type: 2}
-  objectType: tree
 --- !u!1001 &1211177333
 Prefab:
   m_ObjectHideFlags: 0
@@ -10159,7 +10059,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10178,7 +10078,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1926823238069314, guid: 9e11ea33aa8458c47ab990d305ef7e3e, type: 2}
-  objectType: player
 --- !u!1001 &1263605982
 Prefab:
   m_ObjectHideFlags: 0
@@ -10443,7 +10342,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1037354342609666, guid: 3b1d1f2d57367d84f82c485877d74c5b, type: 2}
-  objectType: player
 --- !u!224 &1278766296
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10455,7 +10353,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11126,7 +11024,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1033179412002624, guid: 9aea7febd104905468e93992c972d169, type: 2}
-  objectType: stone
 --- !u!4 &1331796293
 Transform:
   m_ObjectHideFlags: 0
@@ -11168,7 +11065,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1105550965680128, guid: f8d03d9799c19b947861b167427d44b2, type: 2}
-  objectType: stone
 --- !u!4 &1338956607
 Transform:
   m_ObjectHideFlags: 0
@@ -11356,7 +11252,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1432105117226128, guid: 8ae81c7c5fcfc13419b184ecc108ad8a, type: 2}
-  objectType: stone
 --- !u!4 &1359110224
 Transform:
   m_ObjectHideFlags: 0
@@ -11652,7 +11547,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1432105117226128, guid: 8ae81c7c5fcfc13419b184ecc108ad8a, type: 2}
-  objectType: stone
 --- !u!4 &1387639432
 Transform:
   m_ObjectHideFlags: 0
@@ -11698,7 +11592,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1770499145809164, guid: 46514f01e6b22b14785d7816b0a8765a, type: 2}
-  objectType: player
 --- !u!224 &1393455405
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11710,7 +11603,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12174,7 +12067,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1647372470254514, guid: 141d95ee0007eb24ba01ce1fd8a280fc, type: 2}
-  objectType: stone
 --- !u!4 &1460403308
 Transform:
   m_ObjectHideFlags: 0
@@ -12776,7 +12668,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1432105117226128, guid: 8ae81c7c5fcfc13419b184ecc108ad8a, type: 2}
-  objectType: stone
 --- !u!4 &1573532179
 Transform:
   m_ObjectHideFlags: 0
@@ -12893,7 +12784,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1432105117226128, guid: 8ae81c7c5fcfc13419b184ecc108ad8a, type: 2}
-  objectType: stone
 --- !u!1 &1577963519
 GameObject:
   m_ObjectHideFlags: 0
@@ -12935,7 +12825,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1432105117226128, guid: 8ae81c7c5fcfc13419b184ecc108ad8a, type: 2}
-  objectType: stone
 --- !u!4 &1581788161 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: a3170992a56741a4cb89c578e22597bf, type: 2}
@@ -13146,7 +13035,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &1600932427
 Transform:
   m_ObjectHideFlags: 0
@@ -13453,7 +13341,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!1001 &1655401504
 Prefab:
   m_ObjectHideFlags: 0
@@ -13607,7 +13494,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1105550965680128, guid: f8d03d9799c19b947861b167427d44b2, type: 2}
-  objectType: stone
 --- !u!1001 &1664667365
 Prefab:
   m_ObjectHideFlags: 0
@@ -13976,7 +13862,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1033179412002624, guid: 9aea7febd104905468e93992c972d169, type: 2}
-  objectType: stone
 --- !u!4 &1709343510
 Transform:
   m_ObjectHideFlags: 0
@@ -14266,7 +14151,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &1734523887
 Transform:
   m_ObjectHideFlags: 0
@@ -14405,6 +14289,8 @@ GameObject:
   - component: {fileID: 1738076530}
   - component: {fileID: 1738076531}
   - component: {fileID: 1738076532}
+  - component: {fileID: 1738076533}
+  - component: {fileID: 1738076534}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Holdable
@@ -14488,7 +14374,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1738076528
 MeshCollider:
@@ -14549,10 +14435,11 @@ MonoBehaviour:
   synchronization: 3
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
-  ownershipTransfer: 0
+  ownershipTransfer: 1
   ObservedComponents:
   - {fileID: 1738076527}
-  - {fileID: 1738076532}
+  - {fileID: 1738076533}
+  - {fileID: 1738076534}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 2
   instantiationId: 2
@@ -14623,6 +14510,30 @@ MonoBehaviour:
     InterpolateOption: 0
     InterpolateMoveTowardsSpeed: 1
     InterpolateLerpSpeed: 0
+--- !u!114 &1738076533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1738076522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 1
+--- !u!114 &1738076534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1738076522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f5bae0639fa3824d92c7b0ee7ac75e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1738270440 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: a3170992a56741a4cb89c578e22597bf, type: 2}
@@ -14713,7 +14624,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1105550965680128, guid: f8d03d9799c19b947861b167427d44b2, type: 2}
-  objectType: stone
 --- !u!4 &1739627291
 Transform:
   m_ObjectHideFlags: 0
@@ -14941,7 +14851,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1432105117226128, guid: 8ae81c7c5fcfc13419b184ecc108ad8a, type: 2}
-  objectType: stone
 --- !u!4 &1751036693
 Transform:
   m_ObjectHideFlags: 0
@@ -15142,7 +15051,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1647372470254514, guid: 141d95ee0007eb24ba01ce1fd8a280fc, type: 2}
-  objectType: stone
 --- !u!1001 &1770854535
 Prefab:
   m_ObjectHideFlags: 0
@@ -15767,7 +15675,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &1874236573
 Transform:
   m_ObjectHideFlags: 0
@@ -15877,7 +15784,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &1881615769
 Transform:
   m_ObjectHideFlags: 0
@@ -15995,7 +15901,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1033179412002624, guid: 9aea7febd104905468e93992c972d169, type: 2}
-  objectType: stone
 --- !u!4 &1902493801
 Transform:
   m_ObjectHideFlags: 0
@@ -16112,7 +16017,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1647372470254514, guid: 141d95ee0007eb24ba01ce1fd8a280fc, type: 2}
-  objectType: stone
 --- !u!4 &1908044724 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: db16d6ef13ea7fe48b77f1f7f483717a, type: 3}
@@ -16145,7 +16049,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1033179412002624, guid: 9aea7febd104905468e93992c972d169, type: 2}
-  objectType: stone
 --- !u!4 &1912271224
 Transform:
   m_ObjectHideFlags: 0
@@ -16245,7 +16148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &1917343863
 Transform:
   m_ObjectHideFlags: 0
@@ -16369,7 +16271,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1860103150408482, guid: ecfb7cd9098070144991cde372234b53, type: 2}
-  objectType: stone
 --- !u!4 &1928501150
 Transform:
   m_ObjectHideFlags: 0
@@ -16823,7 +16724,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1130027135913548, guid: b2c4f6890fcdf4245b5d5235481a1eda, type: 2}
-  objectType: stone
 --- !u!4 &1986850866
 Transform:
   m_ObjectHideFlags: 0
@@ -16837,48 +16737,6 @@ Transform:
   m_Father: {fileID: 2013884686}
   m_RootOrder: 231
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1993415328
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1993415329}
-  - component: {fileID: 1993415330}
-  m_Layer: 0
-  m_Name: SkeletonSpawn
-  m_TagString: SpawnPoint
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1993415329
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1993415328}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 1935.287, y: 1.274, z: 1877.08}
-  m_LocalScale: {x: 10, y: 10, z: 10}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1993415330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1993415328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dc8b263071f8f645b92f7fe29fceaaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 1071844142379126, guid: 976e96db96604dc4f9be98309c2bcaf2, type: 2}
-  objectType: skeleton
 --- !u!1001 &1994486090
 Prefab:
   m_ObjectHideFlags: 0
@@ -17197,7 +17055,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1432105117226128, guid: 8ae81c7c5fcfc13419b184ecc108ad8a, type: 2}
-  objectType: stone
 --- !u!4 &2006393556
 Transform:
   m_ObjectHideFlags: 0
@@ -17249,7 +17106,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2010519342
 Prefab:
@@ -17863,7 +17720,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1432105117226128, guid: 8ae81c7c5fcfc13419b184ecc108ad8a, type: 2}
-  objectType: stone
 --- !u!4 &2050625112
 Transform:
   m_ObjectHideFlags: 0
@@ -18001,7 +17857,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1105550965680128, guid: f8d03d9799c19b947861b167427d44b2, type: 2}
-  objectType: stone
 --- !u!4 &2057639451
 Transform:
   m_ObjectHideFlags: 0
@@ -18327,3 +18182,59 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 9fccf20fcafb2ea4f9383135948e8d04, type: 3}
+--- !u!1001 &2145507390
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4919008779511334, guid: 976e96db96604dc4f9be98309c2bcaf2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1934.6743
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919008779511334, guid: 976e96db96604dc4f9be98309c2bcaf2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.04979992
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919008779511334, guid: 976e96db96604dc4f9be98309c2bcaf2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1874.5962
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919008779511334, guid: 976e96db96604dc4f9be98309c2bcaf2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919008779511334, guid: 976e96db96604dc4f9be98309c2bcaf2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919008779511334, guid: 976e96db96604dc4f9be98309c2bcaf2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919008779511334, guid: 976e96db96604dc4f9be98309c2bcaf2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919008779511334, guid: 976e96db96604dc4f9be98309c2bcaf2, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1071844142379126, guid: 976e96db96604dc4f9be98309c2bcaf2, type: 2}
+      propertyPath: m_Name
+      value: Skeleton (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114263305651534056, guid: 976e96db96604dc4f9be98309c2bcaf2,
+        type: 2}
+      propertyPath: viewIdField
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114263305651534056, guid: 976e96db96604dc4f9be98309c2bcaf2,
+        type: 2}
+      propertyPath: instantiationId
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 976e96db96604dc4f9be98309c2bcaf2, type: 2}
+  m_IsPrefabParent: 0

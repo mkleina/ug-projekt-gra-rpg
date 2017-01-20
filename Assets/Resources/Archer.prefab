@@ -2346,7 +2346,7 @@ BoxCollider:
   m_GameObject: {fileID: 1926823238069314}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.2, z: 0.1}
   m_Center: {x: 0, y: -0.1, z: 0}
@@ -2471,6 +2471,9 @@ MonoBehaviour:
   - Type: 9
     SynchronizeType: 0
     Name: runAttack
+  - Type: 9
+    SynchronizeType: 0
+    Name: fastAttack
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0

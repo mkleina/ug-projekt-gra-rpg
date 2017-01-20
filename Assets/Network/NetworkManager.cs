@@ -15,7 +15,7 @@ public class NetworkManager : MonoBehaviour
 
     private void Awake()
     {
-        PhotonNetwork.automaticallySyncScene = true;
+        //PhotonNetwork.automaticallySyncScene = true;
     }
 
     // Update is called once per frame
@@ -26,23 +26,10 @@ public class NetworkManager : MonoBehaviour
     }
     void OnCreatedRoom()
     {
-
         //PhotonNetwork.LoadLevel("Projekt");
 
         //SpawnSkeleton();
         //SpawnCube();
-
-        var spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
-        foreach (var spawnPoint in spawnPoints)
-        {
-            var spawnParams = spawnPoint.GetComponent<SpawnPointParameters>();
-            if (spawnParams.objectType != "player" && spawnParams.objectType != "stone")
-            {
-                Debug.Log(spawnPoint.name + ": " + spawnParams.objectType);
-                PhotonNetwork.Instantiate(spawnParams.prefab.name, spawnPoint.transform.position, spawnPoint.transform.rotation, 0, null);
-            }
-        }
-
     }
 
     void OnJoinedRoom()
@@ -51,8 +38,8 @@ public class NetworkManager : MonoBehaviour
 
         // All available players with spawn order
         List<string> availPlayers = new List<string>();
-        availPlayers.Add("Wizard");
         availPlayers.Add("Warrior");
+        availPlayers.Add("Wizard");
         availPlayers.Add("Archer");
 
 
@@ -79,7 +66,7 @@ public class NetworkManager : MonoBehaviour
             var spawnParams = spawnPoint.GetComponent<SpawnPointParameters>();
 
             // Spawn next player if available
-            if (spawnParams.objectType == "player" && spawnParams.prefab.name == PhotonNetwork.player.NickName)
+            if (spawnParams.prefab.name == PhotonNetwork.player.NickName)
             {
 
 
@@ -88,11 +75,8 @@ public class NetworkManager : MonoBehaviour
                 player.GetComponent<WSAD>().enabled = true;
                 player.GetComponent<CameraMove>().enabled = true;
                 player.transform.FindChild("Camera").gameObject.SetActive(true);
-                player.GetComponent<CapsuleCollider>().enabled = true;
-                player.GetComponent<BoxCollider>().enabled = true;
                 player.GetComponent<CharacterHealth>().enabled = true;
                 player.GetComponent<PlayerHealthBar>().enabled = true;
-                player.GetComponent<Animator>().enabled = true;
 
                 // Enable character-specific scripts
                 if (spawnParams.prefab.name == "Wizard")
@@ -102,7 +86,6 @@ public class NetworkManager : MonoBehaviour
                 if (spawnParams.prefab.name == "Warrior")
                 {
                     player.GetComponent<Attack>().enabled = true;
-                    Debug.Log("------------------ Warrior ATTACK!");
                 }
                 if (spawnParams.prefab.name == "Archer")
                 {
@@ -112,26 +95,7 @@ public class NetworkManager : MonoBehaviour
         }
     }
 
-    //void SpawnSkeleton()
-    //{
-    //    Transform spawnPoint = GameObject.Find("SkeletonSpawn").transform;
-    //    GameObject monster = PhotonNetwork.Instantiate("Skeleton", spawnPoint.position, spawnPoint.rotation, 0, null);
-    //    monster.GetComponent<CharacterHealth>().enabled = true;
-    //    monster.GetComponent<detectHit>().enabled = true;
-    //    monster.GetComponent<Movement>().enabled = true;
-    //    monster.GetComponent<NavMeshAgent>().enabled = true;
-
-    //}
-
-    //void SpawnCube()
-    //{
-    //    Transform spawnPoint = GameObject.Find("CubeSpawn").transform;
-    //    GameObject cube = PhotonNetwork.Instantiate("Konar", spawnPoint.position, spawnPoint.rotation, 0, null);
-    //    cube.GetComponent<MeshCollider>().enabled = true;
-    //}
-
     private void Update()
     {
     }
-
 }
