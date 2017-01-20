@@ -26,6 +26,8 @@ GameObject:
   - component: {fileID: 114096533643232264}
   - component: {fileID: 114523566603757756}
   - component: {fileID: 114764462773169546}
+  - component: {fileID: 114273241206867704}
+  - component: {fileID: 114116810779609016}
   m_Layer: 0
   m_Name: Konar
   m_TagString: Holdable
@@ -119,12 +121,36 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1123564997267906}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5737db32131cb3b45a9a127c42b7911f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
+--- !u!114 &114116810779609016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1123564997267906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 1
+--- !u!114 &114273241206867704
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1123564997267906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f5bae0639fa3824d92c7b0ee7ac75e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114523566603757756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -143,10 +169,11 @@ MonoBehaviour:
   synchronization: 3
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
-  ownershipTransfer: 0
+  ownershipTransfer: 1
   ObservedComponents:
   - {fileID: 4925493082515778}
-  - {fileID: 114764462773169546}
+  - {fileID: 114116810779609016}
+  - {fileID: 114273241206867704}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
   instantiationId: -1
@@ -206,7 +233,7 @@ MonoBehaviour:
     ExtrapolateSpeed: 1
     ExtrapolateIncludingRoundTripTime: 1
     ExtrapolateNumberOfStoredPositions: 1
-    DrawErrorGizmo: 1
+    DrawErrorGizmo: 0
   m_RotationModel:
     SynchronizeEnabled: 1
     InterpolateOption: 1
