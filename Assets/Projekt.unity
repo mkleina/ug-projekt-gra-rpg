@@ -3070,6 +3070,11 @@ Prefab:
       propertyPath: ownershipTransfer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114952778502210950, guid: c0bfeff8c736d934d910154eee0bec50,
+        type: 2}
+      propertyPath: groupID
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0bfeff8c736d934d910154eee0bec50, type: 2}
   m_IsPrefabParent: 0
@@ -3459,6 +3464,11 @@ Prefab:
         type: 2}
       propertyPath: instantiationId
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114952778502210950, guid: c0bfeff8c736d934d910154eee0bec50,
+        type: 2}
+      propertyPath: groupID
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0bfeff8c736d934d910154eee0bec50, type: 2}
@@ -7082,6 +7092,17 @@ MonoBehaviour:
   - Olaboga! Pomocy!
   - "Nasz\u0105 wiosk\u0119 zaatakowa\u0142y szkieletory!"
   - "Zabij je wszystkie a wska\u017C\u0119 Ci drog\u0119."
+--- !u!114 &793686632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 793686627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5dd2a684cc97c04589baffb2f33e422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &804552434
 Prefab:
   m_ObjectHideFlags: 0
@@ -9414,6 +9435,11 @@ Prefab:
         type: 2}
       propertyPath: instantiationId
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114952778502210950, guid: c0bfeff8c736d934d910154eee0bec50,
+        type: 2}
+      propertyPath: groupID
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0bfeff8c736d934d910154eee0bec50, type: 2}
@@ -14126,6 +14152,11 @@ Prefab:
       propertyPath: instantiationId
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114952778502210950, guid: c0bfeff8c736d934d910154eee0bec50,
+        type: 2}
+      propertyPath: groupID
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0bfeff8c736d934d910154eee0bec50, type: 2}
   m_IsPrefabParent: 0
@@ -15869,6 +15900,11 @@ Prefab:
         type: 2}
       propertyPath: instantiationId
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114952778502210950, guid: c0bfeff8c736d934d910154eee0bec50,
+        type: 2}
+      propertyPath: groupID
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0bfeff8c736d934d910154eee0bec50, type: 2}
@@ -18223,6 +18259,11 @@ Prefab:
         type: 2}
       propertyPath: instantiationId
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114952778502210950, guid: c0bfeff8c736d934d910154eee0bec50,
+        type: 2}
+      propertyPath: groupID
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0bfeff8c736d934d910154eee0bec50, type: 2}

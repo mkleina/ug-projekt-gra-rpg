@@ -468,6 +468,7 @@ GameObject:
   - component: {fileID: 114987293496268302}
   - component: {fileID: 114370763880208556}
   - component: {fileID: 114172725020319806}
+  - component: {fileID: 114952778502210950}
   m_Layer: 0
   m_Name: Skeleton (1)
   m_TagString: Enemy
@@ -1509,6 +1510,18 @@ MonoBehaviour:
   instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
+--- !u!114 &114952778502210950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1676625464784224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95e96520f64f4bb42b18c5b6367bdd76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groupID: 0
 --- !u!114 &114987293496268302
 MonoBehaviour:
   m_ObjectHideFlags: 1
