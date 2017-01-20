@@ -857,10 +857,10 @@ GameObject:
   - component: {fileID: 65673267650351416}
   - component: {fileID: 95707613620865202}
   - component: {fileID: 114952402521236232}
-  - component: {fileID: 114113984083928658}
   - component: {fileID: 114382579857974328}
   - component: {fileID: 114720871281037096}
   - component: {fileID: 114493893466986988}
+  - component: {fileID: 114337623310785348}
   - component: {fileID: 114533909137050686}
   m_Layer: 0
   m_Name: Warrior
@@ -2253,7 +2253,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114113984083928658
+--- !u!114 &114337623310785348
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2261,10 +2261,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1770499145809164}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5737db32131cb3b45a9a127c42b7911f, type: 3}
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 1
 --- !u!114 &114382579857974328
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2384,7 +2385,7 @@ MonoBehaviour:
   ownershipTransfer: 0
   ObservedComponents:
   - {fileID: 224263297238830546}
-  - {fileID: 114113984083928658}
+  - {fileID: 114337623310785348}
   - {fileID: 114533909137050686}
   - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1

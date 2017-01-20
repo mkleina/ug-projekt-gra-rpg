@@ -11,6 +11,8 @@ public class NetworkManager : MonoBehaviour
     void Start()
     {
         PhotonNetwork.ConnectUsingSettings(VERSION);
+        PhotonNetwork.sendRate = 30;
+        PhotonNetwork.sendRateOnSerialize = 30;
     }
 
     private void Awake()
@@ -77,6 +79,7 @@ public class NetworkManager : MonoBehaviour
                 player.transform.FindChild("Camera").gameObject.SetActive(true);
                 player.GetComponent<CharacterHealth>().enabled = true;
                 player.GetComponent<PlayerHealthBar>().enabled = true;
+                player.GetComponent<PhotonView>().RequestOwnership();
 
                 // Enable character-specific scripts
                 if (spawnParams.prefab.name == "Wizard")

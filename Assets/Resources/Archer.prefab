@@ -1117,10 +1117,10 @@ GameObject:
   - component: {fileID: 65205923215469142}
   - component: {fileID: 95356427363795164}
   - component: {fileID: 114989101348295096}
-  - component: {fileID: 114624522403898742}
   - component: {fileID: 114366861257965580}
   - component: {fileID: 114937275767938430}
   - component: {fileID: 114500927885846800}
+  - component: {fileID: 114865844923163754}
   - component: {fileID: 114670250161605668}
   m_Layer: 0
   m_Name: Archer
@@ -2427,18 +2427,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77fd4ae607d3b5548a3b1d2a5e8ad00c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114624522403898742
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1926823238069314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5737db32131cb3b45a9a127c42b7911f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 0}
 --- !u!114 &114670250161605668
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2469,14 +2457,27 @@ MonoBehaviour:
     SynchronizeType: 1
     Name: Sprint
   - Type: 9
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: runAttack
   - Type: 9
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: fastAttack
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
+--- !u!114 &114865844923163754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1926823238069314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 1
 --- !u!114 &114937275767938430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2510,9 +2511,9 @@ MonoBehaviour:
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 114624522403898742}
+  - {fileID: 224637151670839262}
+  - {fileID: 114865844923163754}
   - {fileID: 114670250161605668}
-  - {fileID: 0}
   - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
