@@ -23,10 +23,9 @@ GameObject:
   - component: {fileID: 23579516912362178}
   - component: {fileID: 54050049790377900}
   - component: {fileID: 64091229076770106}
-  - component: {fileID: 65607375507269970}
+  - component: {fileID: 114096533643232264}
   - component: {fileID: 114523566603757756}
-  - component: {fileID: 114585025627896788}
-  - component: {fileID: 114565632885202140}
+  - component: {fileID: 114764462773169546}
   m_Layer: 0
   m_Name: Konar
   m_TagString: Holdable
@@ -108,24 +107,24 @@ MeshCollider:
   m_GameObject: {fileID: 1123564997267906}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Convex: 1
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 4fbd949bcdd13da4f969682d77022453, type: 3}
---- !u!65 &65607375507269970
-BoxCollider:
+--- !u!114 &114096533643232264
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1123564997267906}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.4, z: 0.3}
-  m_Center: {x: -0.0153924525, y: 0.123451084, z: 0.27201727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5737db32131cb3b45a9a127c42b7911f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 0}
 --- !u!114 &114523566603757756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -147,27 +146,13 @@ MonoBehaviour:
   ownershipTransfer: 0
   ObservedComponents:
   - {fileID: 4925493082515778}
-  - {fileID: 114585025627896788}
-  - {fileID: 114565632885202140}
+  - {fileID: 114764462773169546}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
   instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
---- !u!114 &114565632885202140
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1123564997267906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 1
---- !u!114 &114585025627896788
+--- !u!114 &114764462773169546
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

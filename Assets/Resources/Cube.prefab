@@ -26,8 +26,8 @@ GameObject:
   - component: {fileID: 64027529951390138}
   - component: {fileID: 208448513285310514}
   - component: {fileID: 114174757116625652}
-  - component: {fileID: 114734858718784914}
   - component: {fileID: 114698505770504972}
+  - component: {fileID: 114734858718784914}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Holdable

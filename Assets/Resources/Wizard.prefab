@@ -57,7 +57,6 @@ GameObject:
   - component: {fileID: 65368972184546626}
   - component: {fileID: 95499243977046136}
   - component: {fileID: 114826968206407446}
-  - component: {fileID: 114724138367401354}
   - component: {fileID: 114297814196669120}
   - component: {fileID: 114013046966202398}
   - component: {fileID: 114428446473327732}
@@ -2461,7 +2460,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 0}
-  razy: 1
 --- !u!114 &114428446473327732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2516,7 +2514,7 @@ MonoBehaviour:
     SynchronizeType: 1
     Name: Sprint
   - Type: 9
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: runAtt
   m_SynchronizeLayers:
   - SynchronizeType: 0
@@ -2532,19 +2530,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77fd4ae607d3b5548a3b1d2a5e8ad00c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114724138367401354
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1037354342609666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizeVelocity: 1
-  m_SynchronizeAngularVelocity: 1
 --- !u!114 &114826968206407446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2568,7 +2553,7 @@ MonoBehaviour:
   - {fileID: 224839575263498756}
   - {fileID: 114297814196669120}
   - {fileID: 114543339039026676}
-  - {fileID: 114724138367401354}
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
   instantiationId: -1

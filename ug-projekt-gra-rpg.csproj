@@ -52,9 +52,6 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -69,9 +66,6 @@
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VR">
       <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
@@ -99,6 +93,8 @@
     <Compile Include="Assets\BowAttack.cs" />
     <Compile Include="Assets\CameraMove.cs" />
     <Compile Include="Assets\CharacterHealth.cs" />
+    <Compile Include="Assets\DetectHitByObject.cs" />
+    <Compile Include="Assets\DetectObjectHit.cs" />
     <Compile Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Scripts\Antialiasing.cs" />
     <Compile Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Scripts\Bloom.cs" />
     <Compile Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Scripts\BloomAndFlares.cs" />
@@ -138,9 +134,9 @@
     <Compile Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
     <Compile Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
     <Compile Include="Assets\LookAtPlayer.cs" />
+    <Compile Include="Assets\Movement.cs" />
     <Compile Include="Assets\NPCDialog.cs" />
     <Compile Include="Assets\NPCTalk.cs" />
-    <Compile Include="Assets\Movement.cs" />
     <Compile Include="Assets\Network\NetworkManager.cs" />
     <Compile Include="Assets\Network\NetworkPlayer.cs" />
     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\CustomTypes.cs" />
@@ -226,7 +222,6 @@
     <Compile Include="Assets\Startup.cs" />
     <Compile Include="Assets\WSAD.cs" />
     <Compile Include="Assets\WizardHolding.cs" />
-    <Compile Include="Assets\detectHit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />

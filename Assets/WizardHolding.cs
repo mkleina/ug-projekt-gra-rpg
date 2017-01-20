@@ -43,6 +43,7 @@ public class WizardHolding : Photon.MonoBehaviour
         {
             if (hit.transform.gameObject.tag == "Holdable" && hit.distance < objectDistanceMax)
             {
+                Debug.Log(hit.transform.gameObject.tag);
                 turnSpecialCrosshair(true);
 
                 if (Input.GetMouseButtonDown(0) && holdedThing == null)
