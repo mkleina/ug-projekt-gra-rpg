@@ -9,9 +9,9 @@ public class DetectHitByObject : Photon.MonoBehaviour {
     public GameObject healthBar;
 
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        GetComponent<CharacterHealth>().damage(other.GetComponent<Rigidbody>().velocity.magnitude * damageMagnitudeSensivity);
+        GetComponent<CharacterHealth>().damage(other.gameObject.GetComponent<Rigidbody>().velocity.magnitude * damageMagnitudeSensivity);
     }
 
     // Use this for initialization

@@ -52,9 +52,6 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -69,9 +66,6 @@
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VR">
       <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
@@ -96,6 +90,7 @@
     <Compile Include="Assets\Animation\Galtrilian\Wizard.cs" />
     <Compile Include="Assets\Animations.cs" />
     <Compile Include="Assets\Attack.cs" />
+    <Compile Include="Assets\Boss.cs" />
     <Compile Include="Assets\BowAttack.cs" />
     <Compile Include="Assets\CameraMove.cs" />
     <Compile Include="Assets\Campfire Pack\Script\SwitchView.cs" />
