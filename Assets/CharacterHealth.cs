@@ -14,6 +14,12 @@ public class CharacterHealth : Photon.MonoBehaviour
 
     public void damage(float value)
     {
+        photonView.RPC("damageRPC", PhotonTargets.All, value);
+    }
+
+    [PunRPC]
+    private void damageRPC(float value)
+    {
         // Sending object health information from current player
         // This fixes online collisions
         if (this.tag != "Player")

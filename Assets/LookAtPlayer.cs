@@ -13,11 +13,7 @@ public class LookAtPlayer : MonoBehaviour {
 	void Update () {
         if (Camera.main != null)
         {
-            var pozycja = Camera.main.transform.position;
-            if (pozycja != null)
-            {
-                transform.LookAt(pozycja);
-            }
+            transform.LookAt(Camera.main.transform.position);
         }
     }
 }

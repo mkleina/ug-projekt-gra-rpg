@@ -3,15 +3,12 @@
 public class Attack : Photon.MonoBehaviour
 {
     Animator anim;
-    Rigidbody rb;
     const float runSpeed = 8.0f;
     const float attackDistance = 2.0f;
 
-    public GameObject getPosition;
     // Use this for initialization
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
     }
 
@@ -22,14 +19,23 @@ public class Attack : Photon.MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            anim.SetTrigger("fastAttack");
+            //anim.SetTrigger("fastAttack");
+            photonView.RPC("triggerAnim", PhotonTargets.All, "fastAttack");
         }
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
-            anim.SetTrigger("runAttack");
+            //anim.SetTrigger("runAttack");
+            photonView.RPC("triggerAnim", PhotonTargets.All, "runAttack");
         }
     }
 
+    [PunRPC]
+    private void triggerAnim(string name)
+    {
+        anim.SetTrigger(name);
+    }
+
+    // HitEvent is animation triggered method
     void HitEvent(int type)
     {
         if (!photonView.isMine) return;

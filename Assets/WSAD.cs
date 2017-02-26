@@ -21,44 +21,44 @@ public class WSAD : Photon.MonoBehaviour {
 
     void Update()
     {
-        if (!photonView.isMine)
+        if (!photonView.isMine) return;
+
+        run = Input.GetKey(KeyCode.LeftShift);
+        anim.SetBool("Sprint", run);
+
+        float speed = run ? runSpeed : walkSpeed;
+
+        if (rb.velocity.magnitude < speed)
         {
-            return;
+            if (Input.GetKey(KeyCode.W))
+            {
+                rb.AddRelativeForce(Vector3.forward * speed, ForceMode.VelocityChange);
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                rb.AddRelativeForce(Vector3.back * speed, ForceMode.VelocityChange); ;
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                rb.AddRelativeForce(Vector3.left * speed, ForceMode.VelocityChange);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                rb.AddRelativeForce(Vector3.right * speed, ForceMode.VelocityChange);
+            }
         }
-            run = Input.GetKey(KeyCode.LeftShift);
-            anim.SetBool("Sprint", run);
+        anim.SetFloat("VelX", Input.GetAxis("Horizontal"));
+        anim.SetFloat("VelY", Input.GetAxis("Vertical"));
 
-            float speed = run ? runSpeed : walkSpeed;
-
-            if (rb.velocity.magnitude < speed)
-            {
-                if (Input.GetKey(KeyCode.W))
-                {
-                    rb.AddRelativeForce(Vector3.forward * speed, ForceMode.VelocityChange);
-                }
-                if (Input.GetKey(KeyCode.S))
-                {
-                    rb.AddRelativeForce(Vector3.back * speed, ForceMode.VelocityChange); ;
-                }
-                if (Input.GetKey(KeyCode.A))
-                {
-                    rb.AddRelativeForce(Vector3.left * speed, ForceMode.VelocityChange);
-                }
-                if (Input.GetKey(KeyCode.D))
-                {
-                    rb.AddRelativeForce(Vector3.right * speed, ForceMode.VelocityChange);
-                }
-            }
-            anim.SetFloat("VelX", Input.GetAxis("Horizontal"));
-            anim.SetFloat("VelY", Input.GetAxis("Vertical"));
-
-            if (Input.GetKeyDown(KeyCode.Space) && onGround)
-            {
-                jump();
-            }
+        if (Input.GetKeyDown(KeyCode.Space) && onGround)
+        {
+            //jump();
+            photonView.RPC("jump", PhotonTargets.All);
+        }
         
     }
 
+    [PunRPC]
     void jump()
     {
         onGround = false;

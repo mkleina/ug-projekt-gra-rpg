@@ -36,6 +36,7 @@ public class WizardHolding : Photon.MonoBehaviour
 
     void Update()
     {
+        if (!photonView.isMine) return;
 
         ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
         hits = Physics.RaycastAll(ray);
@@ -49,7 +50,7 @@ public class WizardHolding : Photon.MonoBehaviour
                 if (Input.GetMouseButtonDown(0) && holdedThing == null)
                 {
                     holdedThing = hit.transform.gameObject;
-                    holdedThing.GetComponent<PhotonView>().RequestOwnership();
+                    photonView.RequestOwnership();
                     holdedThing.GetComponent<Rigidbody>().useGravity = false;
                     objectDistance = Mathf.Clamp(hit.distance, colliderSize(holdedThing) / 2 + objectDistanceMin, objectDistanceMax);
                     break;

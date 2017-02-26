@@ -21,12 +21,12 @@ public class NetworkManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnJoinedLobby()
+    private void OnJoinedLobby()
     {
         RoomOptions roomOptions = new RoomOptions() { IsVisible = false, MaxPlayers = 4 };
         PhotonNetwork.JoinOrCreateRoom(roomName, roomOptions, TypedLobby.Default);
     }
-    void OnCreatedRoom()
+    private void OnCreatedRoom()
     {
         //PhotonNetwork.LoadLevel("Projekt");
 
@@ -34,13 +34,13 @@ public class NetworkManager : MonoBehaviour
         //SpawnCube();
     }
 
-    void OnJoinedRoom()
+    private void OnJoinedRoom()
     {
         Debug.Log("Joined room");
 
         // All available players with spawn order
         List<string> availPlayers = new List<string>();
-        availPlayers.Add("Warrior");
+        availPlayers.Add("Wizard");  //availPlayers.Add("Warrior");
         availPlayers.Add("Wizard");
         availPlayers.Add("Archer");
 
@@ -72,11 +72,7 @@ public class NetworkManager : MonoBehaviour
             {
                 // Instantiate player
                 var currentPlayer = (GameObject)PhotonNetwork.InstantiateGameObject(spawnParams.prefab.name, spawnPoint.transform.position, spawnPoint.transform.rotation, 0);
-                currentPlayer.GetComponent<WSAD>().enabled = true;
-                currentPlayer.GetComponent<CameraMove>().enabled = true;
                 currentPlayer.transform.FindChild("Camera").gameObject.SetActive(true);
-                currentPlayer.GetComponent<CharacterHealth>().enabled = true;
-                currentPlayer.GetComponent<PlayerHealthBar>().enabled = true;
                 currentPlayer.GetComponent<PhotonView>().RequestOwnership();
 
                 // Enable character-specific scripts
@@ -84,14 +80,12 @@ public class NetworkManager : MonoBehaviour
                 {
                     currentPlayer.GetComponent<WizardHolding>().enabled = true;
                 }
-                if (spawnParams.prefab.name == "Warrior")
-                {
-                    currentPlayer.GetComponent<Attack>().enabled = true;
-                }
                 if (spawnParams.prefab.name == "Archer")
                 {
                     currentPlayer.GetComponent<BowAttack>().enabled = true;
                 }
+
+                currentPlayer.transform.Find("Camera").tag = "MainCamera";
             }
         }
     }

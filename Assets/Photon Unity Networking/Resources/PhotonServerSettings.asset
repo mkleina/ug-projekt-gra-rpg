@@ -18,7 +18,7 @@ MonoBehaviour:
   PreferredRegion: 0
   EnabledRegions: -1
   Protocol: 0
-  ServerAddress: 
+  ServerAddress: 127.0.0.1
   ServerPort: 5055
   VoiceServerPort: 5055
   JoinLobby: 1
@@ -28,8 +28,10 @@ MonoBehaviour:
   RunInBackground: 1
   RpcList:
   - Chat
+  - damageRPC
   - DestroyRpc
   - InstantiateRpc
+  - jump
   - OnAwakeRPC
   - PickupItemInit
   - PunPickup
@@ -37,6 +39,5 @@ MonoBehaviour:
   - PunRespawn
   - RequestForPickupItems
   - RequestForPickupTimes
-  - SetHealthBar
-  - move
+  - triggerAnim
   DisableAutoOpenWizard: 1
