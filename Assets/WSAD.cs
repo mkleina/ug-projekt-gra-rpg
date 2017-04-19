@@ -50,9 +50,8 @@ public class WSAD : Photon.MonoBehaviour {
         anim.SetFloat("VelX", Input.GetAxis("Horizontal"));
         anim.SetFloat("VelY", Input.GetAxis("Vertical"));
 
-        if (Input.GetKeyDown(KeyCode.Space) && onGround)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            //jump();
             photonView.RPC("jump", PhotonTargets.All);
         }
         
@@ -61,9 +60,12 @@ public class WSAD : Photon.MonoBehaviour {
     [PunRPC]
     void jump()
     {
-        onGround = false;
-        rb.AddRelativeForce(new Vector3(0, jumpPower, 0));
-        anim.SetTrigger("Jump");
+        if (onGround)
+        {
+            onGround = false;
+            rb.AddRelativeForce(new Vector3(0, jumpPower, 0));
+            anim.SetTrigger("Jump");
+        }
     }
 
     void OnTriggerEnter(Collider other)

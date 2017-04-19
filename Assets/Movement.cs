@@ -1,17 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-public class Movement : MonoBehaviour
+public class Movement : Photon.MonoBehaviour
 {
     private const float attackDistance = 2.0f;
     private const float followDistance = 12.0f;
 
     private string state = "patrol";
     private Animator anim;
-
-    //public GameObject[] waypoints;
-    //private float accuracyWP = 5.0f;
-    //private int currentWP = 0;
 
     // Use this for initialization
     void Start()
@@ -58,28 +54,10 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GetComponent<CharacterHealth>().get() == 0)
-        {
-            return;
-        }
+		if (!photonView.isMine || GetComponent<CharacterHealth>().get() == 0)
+			return;
 
         GameObject nearestPlayer = findNearestPlayer(followDistance);
-
-        //if (state == "patrol" && waypoints.Length > 0)
-        //{
-        //    anim.SetBool("isIdle", false);
-        //    anim.SetBool("isWalking", true);
-        //    if (Vector3.Distance(waypoints[currentWP].transform.position, transform.position) < accuracyWP)
-        //    {
-        //        //currentWP = Random.Range(0, waypoints.Length);
-        //        currentWP++;
-        //        if (currentWP >= waypoints.Length)
-        //        {
-        //            currentWP = 0;
-        //        }
-        //    }
-        //    GetComponent<NavMeshAgent>().destination = waypoints[currentWP].transform.position;
-        //}
 
         if (nearestPlayer != null)
         {

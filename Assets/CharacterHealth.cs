@@ -12,21 +12,10 @@ public class CharacterHealth : Photon.MonoBehaviour
         
     }
 
+	[PunRPC]
     public void damage(float value)
     {
-        photonView.RPC("damageRPC", PhotonTargets.All, value);
-    }
-
-    [PunRPC]
-    private void damageRPC(float value)
-    {
-        // Sending object health information from current player
-        // This fixes online collisions
-        if (this.tag != "Player")
-            //this.GetComponent<PhotonView>().TransferOwnership(PhotonNetwork.player);
-            this.GetComponent<PhotonView>().RequestOwnership();
-
-        healthValue = Mathf.Clamp(healthValue - value, 0, healthValueMax);
+		healthValue = Mathf.Clamp(healthValue - value, 0, healthValueMax);
     }
 
     public float get()

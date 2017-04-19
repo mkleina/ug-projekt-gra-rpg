@@ -466,7 +466,6 @@ GameObject:
   - component: {fileID: 114543446563606114}
   - component: {fileID: 114987293496268302}
   - component: {fileID: 114370763880208556}
-  - component: {fileID: 114172725020319806}
   - component: {fileID: 114952778502210950}
   - component: {fileID: 114256374675847290}
   m_Layer: 0
@@ -656,7 +655,6 @@ GameObject:
   - component: {fileID: 224142206304105162}
   - component: {fileID: 223499272343095000}
   - component: {fileID: 114591588654777516}
-  - component: {fileID: 114623334144425534}
   - component: {fileID: 114677193314271592}
   m_Layer: 0
   m_Name: HealthBar
@@ -1292,17 +1290,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114172725020319806
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1676625464784224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f5bae0639fa3824d92c7b0ee7ac75e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114256374675847290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1315,7 +1302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_PositionModel:
-    SynchronizeEnabled: 0
+    SynchronizeEnabled: 1
     TeleportEnabled: 1
     TeleportIfDistanceGreaterThan: 3
     InterpolateOption: 2
@@ -1359,7 +1346,7 @@ MonoBehaviour:
     ExtrapolateNumberOfStoredPositions: 1
     DrawErrorGizmo: 1
   m_RotationModel:
-    SynchronizeEnabled: 0
+    SynchronizeEnabled: 1
     InterpolateOption: 1
     InterpolateRotateTowardsSpeed: 180
     InterpolateLerpSpeed: 5
@@ -1506,22 +1493,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114623334144425534
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1889948667932142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &114677193314271592
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1551,12 +1522,12 @@ MonoBehaviour:
   synchronization: 3
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
-  ownershipTransfer: 1
+  ownershipTransfer: 0
   ObservedComponents:
   - {fileID: 114256374675847290}
   - {fileID: 114987293496268302}
-  - {fileID: 114172725020319806}
-  - {fileID: 114543446563606114}
+  - {fileID: 0}
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
   instantiationId: -1
@@ -1573,7 +1544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95e96520f64f4bb42b18c5b6367bdd76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groupID: 0
+  groupID: 1
 --- !u!114 &114987293496268302
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -40,8 +40,8 @@ public class NetworkManager : MonoBehaviour
 
         // All available players with spawn order
         List<string> availPlayers = new List<string>();
-        availPlayers.Add("Wizard");  //availPlayers.Add("Warrior");
-        availPlayers.Add("Wizard");
+        //availPlayers.Add("Wizard"); 
+		availPlayers.Add("Warrior");
         availPlayers.Add("Archer");
 
 
@@ -71,7 +71,7 @@ public class NetworkManager : MonoBehaviour
             if (spawnParams.prefab.name == PhotonNetwork.player.NickName)
             {
                 // Instantiate player
-                var currentPlayer = (GameObject)PhotonNetwork.InstantiateGameObject(spawnParams.prefab.name, spawnPoint.transform.position, spawnPoint.transform.rotation, 0);
+                var currentPlayer = (GameObject)PhotonNetwork.Instantiate(spawnParams.prefab.name, spawnPoint.transform.position, spawnPoint.transform.rotation, 0);
                 currentPlayer.transform.FindChild("Camera").gameObject.SetActive(true);
                 currentPlayer.GetComponent<PhotonView>().RequestOwnership();
 

@@ -40,4 +40,16 @@ MonoBehaviour:
   - RequestForPickupItems
   - RequestForPickupTimes
   - triggerAnim
+  - ColorRpc
+  - DoJump
+  - Flash
+  - Marco
+  - Polo
+  - TaggedPlayer
+  - damage
+  - holdThing
+  - moveThing
+  - dropThing
+  - throwThing
+  - setGravity
   DisableAutoOpenWizard: 1

@@ -51,7 +51,7 @@ public class Attack : Photon.MonoBehaviour
                     case 0: damageValue = 20.0f; break;
                     case 1: damageValue = 50.0f; break;
                 }
-                enemyCollider.GetComponent<CharacterHealth>().damage(damageValue);
+                enemyCollider.gameObject.GetPhotonView().RPC("damage", PhotonTargets.All, damageValue);
             }
         }
     }

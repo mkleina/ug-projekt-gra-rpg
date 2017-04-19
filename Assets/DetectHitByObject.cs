@@ -11,7 +11,7 @@ public class DetectHitByObject : Photon.MonoBehaviour {
 
     private void OnCollisionEnter(Collision other)
     {
-        GetComponent<CharacterHealth>().damage(other.gameObject.GetComponent<Rigidbody>().velocity.magnitude * damageMagnitudeSensivity);
+        if (photonView.isMine) photonView.RPC("damage", PhotonTargets.All, other.gameObject.GetComponent<Rigidbody>().velocity.magnitude * damageMagnitudeSensivity);
     }
 
     // Use this for initialization

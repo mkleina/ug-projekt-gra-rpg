@@ -5,7 +5,7 @@ public class WizardHolding : Photon.MonoBehaviour
 {
     const float objectMoveSpeed = 15.0f;
     const float objectRotateSpeed = 200.0f;
-    const float objectThrowPower = 10000.0f;
+    const float objectThrowPower = 3000.0f;
 
     const float objectDistanceMin = 2.7f;
     const float objectDistanceMax = 12.0f;
@@ -22,17 +22,17 @@ public class WizardHolding : Photon.MonoBehaviour
         GameObject.Find("Crosshair2").GetComponent<Image>().enabled = special;
     }
 
-    void dropHoldedObject()
-    {
-        holdedThing.GetComponent<Rigidbody>().useGravity = true;
-        holdedThing = null;
-    }
-
     float colliderSize(GameObject obj)
     {
         Collider objCollider = obj.GetComponent<Collider>();
         return Mathf.Max(objCollider.bounds.size.x, objCollider.bounds.size.y, objCollider.bounds.size.z);
     }
+
+	[PunRPC]
+	void setGravity(int viewID, bool gravity) {
+		var thing = PhotonView.Find (viewID).gameObject;
+		thing.GetComponent<Rigidbody> ().useGravity = gravity;
+	}
 
     void Update()
     {
@@ -44,15 +44,14 @@ public class WizardHolding : Photon.MonoBehaviour
         {
             if (hit.transform.gameObject.tag == "Holdable" && hit.distance < objectDistanceMax)
             {
-                Debug.Log(hit.transform.gameObject.tag);
                 turnSpecialCrosshair(true);
 
                 if (Input.GetMouseButtonDown(0) && holdedThing == null)
                 {
-                    holdedThing = hit.transform.gameObject;
-                    photonView.RequestOwnership();
-                    holdedThing.GetComponent<Rigidbody>().useGravity = false;
-                    objectDistance = Mathf.Clamp(hit.distance, colliderSize(holdedThing) / 2 + objectDistanceMin, objectDistanceMax);
+					holdedThing = hit.transform.gameObject;
+					objectDistance = Mathf.Clamp(hit.distance, colliderSize(holdedThing) / 2 + objectDistanceMin, objectDistanceMax);
+					holdedThing.GetComponent<PhotonView> ().RequestOwnership ();
+					photonView.RPC("setGravity", PhotonTargets.All, hit.transform.gameObject.GetComponent<PhotonView>().viewID, false);
                     break;
                 }
             } else
@@ -62,9 +61,10 @@ public class WizardHolding : Photon.MonoBehaviour
         }
 
         // Drop holded object
-        if (!Input.GetMouseButton(0) && holdedThing != null)
+		if (!Input.GetMouseButton(0) && holdedThing != null)
         {
-            dropHoldedObject();
+			photonView.RPC("setGravity", PhotonTargets.All, holdedThing.GetComponent<PhotonView>().viewID, true);
+			holdedThing = null;
         }
 
         // Moving object in space (forward, backward and rotation)
@@ -100,8 +100,9 @@ public class WizardHolding : Photon.MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.T))
                 {
-                    holdedThing.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * objectThrowPower, ForceMode.Impulse);
-                    dropHoldedObject();
+					holdedThing.GetComponent<Rigidbody>().AddForce(Camera.main.transform.forward * objectThrowPower, ForceMode.Impulse);
+					photonView.RPC("setGravity", PhotonTargets.All, holdedThing.GetComponent<PhotonView>().viewID, true);
+					holdedThing = null;
                 }
             }
         }

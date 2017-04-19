@@ -1,0 +1,16 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Editor\ImageEffects\BloomEditor.cs">
+    <Files>
+      <File FileName="Assets\CameraMove.cs" Line="1" Column="1" />
+      <File FileName="Assets\CharacterHealth.cs" Line="25" Column="5" />
+      <File FileName="Assets\WR_wHiteRabbiT-sTudio\WRFramework\Unity\Editor\Tools\AboutEW.cs" Line="34" Column="4" />
+      <File FileName="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" Line="6" Column="1" />
+      <File FileName="Assets\Standard Assets\Editor\ImageEffects\BloomEditor.cs" Line="86" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

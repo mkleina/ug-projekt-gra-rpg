@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(PhotonView))]
 public class PhotonCustomView : MonoBehaviour, IPunObservable
 {
 
@@ -12,16 +13,16 @@ public class PhotonCustomView : MonoBehaviour, IPunObservable
 
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        var rigid = GetComponent<Rigidbody>();
+        //var rigid = GetComponent<Rigidbody>();
         //var health = GetComponent<CharacterHealth>();
         if (stream.isWriting)
         {
-            if (rigid != null) stream.SendNext(rigid.useGravity);
+            //if (rigid != null) stream.SendNext(rigid.useGravity);
             //if (health != null) stream.SendNext(health.healthValue);
         }
         else
         {
-            if (rigid != null) rigid.useGravity = (bool)stream.ReceiveNext();
+            //if (rigid != null) rigid.useGravity = (bool)stream.ReceiveNext();
             //if (health != null) health.healthValue = (float)stream.ReceiveNext();
         }
     }

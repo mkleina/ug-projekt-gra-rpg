@@ -30,8 +30,8 @@ namespace wHiteRabbiT.UnityEditor
 		[MenuItem ("Window/wHiteRabbiT sTudio/About")]
 		public static void CreateAboutEW()
 		{
-			AboutEW wnd = GetWindow<AboutEW>();
-			wnd.title = "wHiteRabbiT sTudio - About";
+			AboutEW wnd = GetWindow<AboutEW>(); 
+			wnd.titleContent.text = "wHiteRabbiT sTudio - About";
 		}
 		
 		#region Destroy
