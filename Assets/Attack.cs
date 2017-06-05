@@ -30,7 +30,7 @@ public class Attack : Photon.MonoBehaviour
     }
 
     [PunRPC]
-    private void triggerAnim(string name)
+    public void triggerAnim(string name)
     {
         anim.SetTrigger(name);
     }

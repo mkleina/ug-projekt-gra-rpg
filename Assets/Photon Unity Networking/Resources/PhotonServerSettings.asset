@@ -52,4 +52,9 @@ MonoBehaviour:
   - dropThing
   - throwThing
   - setGravity
+  - spawn
+  - armBow
+  - fireBow
+  - spawnBow
+  - destroyBow
   DisableAutoOpenWizard: 1

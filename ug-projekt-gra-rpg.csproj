@@ -89,9 +89,10 @@
   <ItemGroup>
     <Compile Include="Assets\Animation\Galtrilian\Wizard.cs" />
     <Compile Include="Assets\Animations.cs" />
+    <Compile Include="Assets\ArcherBowArmAttack.cs" />
     <Compile Include="Assets\Attack.cs" />
     <Compile Include="Assets\Boss.cs" />
-    <Compile Include="Assets\BowAttack.cs" />
+    <Compile Include="Assets\BowDamage.cs" />
     <Compile Include="Assets\CameraMove.cs" />
     <Compile Include="Assets\Campfire Pack\Script\SwitchView.cs" />
     <Compile Include="Assets\CharacterHealth.cs" />
@@ -135,8 +136,6 @@
     <Compile Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Scripts\Twirl.cs" />
     <Compile Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
     <Compile Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
-    <Compile Include="Assets\Heureka\HeurekaShared\Extensions.cs" />
-    <Compile Include="Assets\Heureka\HeurekaShared\Singleton.cs" />
     <Compile Include="Assets\LookAtPlayer.cs" />
     <Compile Include="Assets\Movement.cs" />
     <Compile Include="Assets\NPCDialog.cs" />
@@ -145,6 +144,7 @@
     <Compile Include="Assets\NPCTalk.cs" />
     <Compile Include="Assets\Network\NetworkManager.cs" />
     <Compile Include="Assets\Network\NetworkPlayer.cs" />
+    <Compile Include="Assets\ObjectTimeout.cs" />
     <Compile Include="Assets\Photon Unity Networking\Demos\Demo2DJumpAndRunWithPhysics\Scripts\Demo2DJumpAndRun.cs" />
     <Compile Include="Assets\Photon Unity Networking\Demos\Demo2DJumpAndRunWithPhysics\Scripts\JumpAndRunMovement.cs" />
     <Compile Include="Assets\Photon Unity Networking\Demos\DemoBoxes\ColorPerPlayer.cs" />
@@ -378,8 +378,6 @@
     <None Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
     <None Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
     <None Include="Assets\ElementyTerenu\Cmentarz\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
-    <None Include="Assets\Heureka\AssetHunter\Editor\Settings\ScriptableObjectsFolder.txt" />
-    <None Include="Assets\Heureka\AssetHunter\Readme.txt" />
     <None Include="Assets\Medieval Bridge\Shaders\Double sided.shader" />
     <None Include="Assets\Photon Unity Networking\Demos\DemoBoxes\Resources\eurof_tt.txt" />
     <None Include="Assets\Photon Unity Networking\Demos\DemoPickup\Assets\3dFont\3dText.shader" />

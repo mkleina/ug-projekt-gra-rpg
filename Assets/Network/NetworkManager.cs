@@ -40,9 +40,9 @@ public class NetworkManager : MonoBehaviour
 
         // All available players with spawn order
         List<string> availPlayers = new List<string>();
-        //availPlayers.Add("Wizard"); 
-		availPlayers.Add("Warrior");
         availPlayers.Add("Archer");
+        availPlayers.Add("Wizard"); 
+        //availPlayers.Add("Warrior");
 
 
         foreach (PhotonPlayer otherPlayer in PhotonNetwork.otherPlayers)
@@ -76,14 +76,18 @@ public class NetworkManager : MonoBehaviour
                 currentPlayer.GetComponent<PhotonView>().RequestOwnership();
 
                 // Enable character-specific scripts
-                if (spawnParams.prefab.name == "Wizard")
-                {
-                    currentPlayer.GetComponent<WizardHolding>().enabled = true;
-                }
-                if (spawnParams.prefab.name == "Archer")
-                {
-                    currentPlayer.GetComponent<BowAttack>().enabled = true;
-                }
+                //if (spawnParams.prefab.name == "Wizard")
+                //{
+                //    currentPlayer.GetComponent<WizardHolding>().enabled = true;
+                //}
+                //if (spawnParams.prefab.name == "Archer")
+                //{
+                //    currentPlayer.GetComponent<ArcherBowArmAttack>().enabled = true;
+                //}
+                //if (spawnParams.prefab.name == "Archer")
+                //{
+                //    currentPlayer.GetComponent<ArcherBowArmAttack>().enabled = true;
+                //}
 
                 currentPlayer.transform.Find("Camera").tag = "MainCamera";
             }
