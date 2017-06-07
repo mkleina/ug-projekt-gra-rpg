@@ -2383,7 +2383,7 @@ Transform:
   - {fileID: 1139862829}
   - {fileID: 897448868}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &160607792
 Prefab:
@@ -2711,74 +2711,6 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: db16d6ef13ea7fe48b77f1f7f483717a, type: 3}
   m_PrefabInternal: {fileID: 517926758}
---- !u!1 &179656214
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 179656216}
-  - component: {fileID: 179656215}
-  - component: {fileID: 179656217}
-  m_Layer: 0
-  m_Name: Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &179656215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 179656214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18b05fd54bf9ece499765bb845bd9f1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roomName: Dungeon
---- !u!4 &179656216
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 179656214}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1939.3813, y: 1.5728226, z: 1857.6462}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &179656217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 179656214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ownerId: 0
-  group: 0
-  OwnerShipWasTransfered: 0
-  prefixBackup: -1
-  synchronization: 0
-  onSerializeTransformOption: 3
-  onSerializeRigidBodyOption: 2
-  ownershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 0}
-  ObservedComponentsFoldoutOpen: 1
-  viewIdField: 139
-  instantiationId: 139
-  currentMasterID: -1
-  isRuntimeInstantiated: 0
 --- !u!1001 &179824545
 Prefab:
   m_ObjectHideFlags: 0
@@ -7122,7 +7054,7 @@ Transform:
   - {fileID: 851212965}
   - {fileID: 1773398619}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &479061802
 Rigidbody:
@@ -14587,7 +14519,7 @@ RectTransform:
   - {fileID: 2002640302}
   - {fileID: 401976007}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -15432,7 +15364,7 @@ Transform:
   - {fileID: 2088159445}
   - {fileID: 1426201670}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1045553400
 Prefab:
@@ -19528,7 +19460,7 @@ Transform:
   - {fileID: 1278766296}
   - {fileID: 1393455405}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1324728505
 Prefab:
@@ -22804,7 +22736,7 @@ Transform:
   m_Children:
   - {fileID: 793686634}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1572146251 stripped
 Transform:
@@ -30953,7 +30885,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2024820942
 Prefab:
@@ -31721,7 +31653,7 @@ Transform:
   m_Children:
   - {fileID: 256091854}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 50.144, y: -154.983, z: -372.676}
 --- !u!114 &2074462124
 MonoBehaviour:

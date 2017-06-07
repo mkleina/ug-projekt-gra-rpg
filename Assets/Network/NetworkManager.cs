@@ -1,6 +1,5 @@
 ﻿using Boo.Lang;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class NetworkManager : MonoBehaviour
 {
@@ -42,7 +41,7 @@ public class NetworkManager : MonoBehaviour
         List<string> availPlayers = new List<string>();
         availPlayers.Add("Archer");
         availPlayers.Add("Wizard"); 
-        //availPlayers.Add("Warrior");
+        availPlayers.Add("Warrior");
 
 
         foreach (PhotonPlayer otherPlayer in PhotonNetwork.otherPlayers)
@@ -74,21 +73,6 @@ public class NetworkManager : MonoBehaviour
                 var currentPlayer = (GameObject)PhotonNetwork.Instantiate(spawnParams.prefab.name, spawnPoint.transform.position, spawnPoint.transform.rotation, 0);
                 currentPlayer.transform.FindChild("Camera").gameObject.SetActive(true);
                 currentPlayer.GetComponent<PhotonView>().RequestOwnership();
-
-                // Enable character-specific scripts
-                //if (spawnParams.prefab.name == "Wizard")
-                //{
-                //    currentPlayer.GetComponent<WizardHolding>().enabled = true;
-                //}
-                //if (spawnParams.prefab.name == "Archer")
-                //{
-                //    currentPlayer.GetComponent<ArcherBowArmAttack>().enabled = true;
-                //}
-                //if (spawnParams.prefab.name == "Archer")
-                //{
-                //    currentPlayer.GetComponent<ArcherBowArmAttack>().enabled = true;
-                //}
-
                 currentPlayer.transform.Find("Camera").tag = "MainCamera";
             }
         }
