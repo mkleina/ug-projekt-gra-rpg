@@ -96,7 +96,7 @@ public class PhotonNetworkManager : MonoBehaviour
                 break;
             case "Refresh":
                 if (PhotonNetwork.JoinLobby())
-                    RefreshList();
+                    Invoke("RefreshList", 0.1f);
                 break;
 
         }
@@ -123,6 +123,7 @@ public class PhotonNetworkManager : MonoBehaviour
             game.transform.FindChild("Player_Count").GetComponent<Text>().text = PhotonNetwork.GetRoomList()[i].PlayerCount + "/3";
             game.transform.FindChild("Join").GetComponent<Button>().onClick.AddListener(()=> { JoinRoom(game.transform.FindChild("Room_Name_Text").GetComponent<Text>().text); });
             game.SetActive(true);
+            roomsPrefab.Add(game);
         }
 
 
