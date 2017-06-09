@@ -118,7 +118,7 @@ public class PhotonNetworkManager : MonoBehaviour
             GameObject game = Instantiate(RoomPrefab);
             game.transform.SetParent(RoomPrefab.transform.parent);
             game.GetComponent<RectTransform>().localScale = RoomPrefab.GetComponent<RectTransform>().localScale;
-            game.GetComponent<RectTransform>().position = new Vector3(RoomPrefab.GetComponent<RectTransform>().localPosition.x, RoomPrefab.GetComponent<RectTransform>().localPosition.y - (i * 50), RoomPrefab.GetComponent<RectTransform>().localPosition.z);
+            game.GetComponent<RectTransform>().localPosition = new Vector3(RoomPrefab.GetComponent<RectTransform>().localPosition.x, RoomPrefab.GetComponent<RectTransform>().localPosition.y - (i * 50), RoomPrefab.GetComponent<RectTransform>().localPosition.z);
             game.transform.FindChild("Room_Name_Text").GetComponent<Text>().text = PhotonNetwork.GetRoomList()[i].Name;
             game.transform.FindChild("Player_Count").GetComponent<Text>().text = PhotonNetwork.GetRoomList()[i].PlayerCount + "/3";
             game.transform.FindChild("Join").GetComponent<Button>().onClick.AddListener(()=> { JoinRoom(game.transform.FindChild("Room_Name_Text").GetComponent<Text>().text); });
