@@ -17,6 +17,7 @@ public class WSAD : Photon.MonoBehaviour {
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        DontDestroyOnLoad(gameObject.transform);
     }
 
     void Update()
